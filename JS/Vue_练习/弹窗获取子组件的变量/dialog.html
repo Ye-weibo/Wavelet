@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>我的vue购物车</title>
+ <!-- <link rel="stylesheet" href="style.css"> -->
+ <script src="vue.js"></script>
+ <style>
+#modal-prompt{
+  width: 300px;
+  height: 200px;
+  margin: 100px auto;
+}
+#prentMes{
+  padding:0 20px;
+  border: 1px solid #ccc;
+  width:400px;
+  height: 40px;
+  line-height: 40px;
+
+}
+.fj-modal-footer, .fj-modal-prompt .fj-modal-footer {
+  display: table;
+  width: 100%;
+    border-collapse: collapse;
+    border-top: 1px solid #dedede;
+}
+/*button*/
+.fj-btn {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.25;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    border-radius: .25rem;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+.fj-btn:focus, .fj-btn:hover {
+    text-decoration: none;
+}
+.fj-btn-primary {
+    color: #fff;
+    background-color: #0275d8;
+    border-color: #0275d8;
+}
+.fj-btn-primary:hover {
+    color: #fff;
+    background-color: #025aa5;
+    border-color: #01549b;
+}
+/*modal*/
+.fj-modal {
+  position: fixed;
+    z-index: 9998;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    display: table;
+}
+.fj-modal-dialog {
+  display: table-cell;
+    vertical-align: middle;
+}
+.fj-modal-container {
+  width: 500px;
+  margin: 0 auto;
+  background-color: #f8f8f8;
+}
+.fj-modal-header {
+  position: relative;
+    padding: 15px 10px 5px 10px;
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-align: center;
+}
+.fj-modal-close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .3;
+    transition: all .3s;
+}
+.fj-modal-close:hover {
+  opacity: .5;
+  transform: rotate(360deg);
+}
+.fj-modal-body {
+    padding: 15px 10px;
+}
+.fj-modal-header+.fj-modal-body {
+  padding-top: 0;
+}
+.fj-modal-footer {
+    height: 44px;
+    padding: 15px 10px;
+}
+
+.modal-btn-cancel, .modal-btn-confirm {
+  display: table-cell;
+  text-align: center;
+    color: #0e90d2;
+    line-height: 44px;
+    cursor: pointer;
+    border-right: 1px solid #dedede;
+}
+input {
+  display: block;
+    margin: 5px auto 0 auto;
+    border-radius: 0;
+    padding: 5px;
+    line-height: 1.8rem;
+    width: 80%;
+    border: 1px solid #dedede;
+}
+
+
+/*动画*/
+.modal-enter, .modal-leave-active {
+  transform: scale(1.2);
+  opacity: 0;
+}
+.modal-enter-active {
+  transition: all .3s ease;
+}
+.modal-leave-active {
+  transition: all .3s ease;
+}
+ </style>
+</head>
+<body>
+ <div id="modal-prompt">
+  <button id="prompt-modal" class="fj-btn fj-btn-primary" @click="promptModal = true">Prompt Modal</button>
+  <hjx-prompt-modal v-if="promptModal" @close="promptModal = false" @confirm="ms">
+    <span slot="modal-header">prompt title</span>
+  </hjx-prompt-modal>
+  <p id="prentMes">Message is : {{msg}}</p>
+</div>
+</body>
+<script>
+Vue.component('hjx-prompt-modal', {
+  template: '\
+    <transition name="modal">\
+      <div class="fj-modal fj-modal-prompt">\
+        <div class="fj-modal-dialog">\
+          <div class="fj-modal-container">\
+            <div class="fj-modal-header">\
+              <slot name="modal-header">modal title</slot>\
+            </div>\
+            <div class="fj-modal-body">\
+              <input ref="input" v-model="message" placeholder="edit me">\
+              <p>Message is: {{ message }}</p>\
+            </div>\
+            <div class="fj-modal-footer">\
+              <div class="modal-btn-cancel" @click="$emit(\'close\')">取消</div>\
+              <div class="modal-btn-confirm" @click="confirm">确认</div>\
+            </div>\
+          </div>\
+        </div>\
+      </div>\
+    </transition>\
+  ',
+  data: function(){
+    return {
+      message: ''
+    }
+  },
+  methods: {
+    confirm: function(){
+      this.message = this.$refs.input.value
+      this.$emit('confirm', this.message)
+      this.$emit('close')
+    }
+
+  }
+})
+
+// start prompt modal
+new Vue({
+  el: '#modal-prompt',
+  data: {
+    promptModal: false,
+    msg: ''
+  },
+  methods: {
+    ms: function(message){
+      return this.msg = message
+    }
+  }
+})
+
+ </script>
+ </html> 

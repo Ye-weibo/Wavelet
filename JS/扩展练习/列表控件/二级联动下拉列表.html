@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>联动下拉菜单</title>
+</head>
+<body>
+	<form name="frm">
+			省份:
+			<select name="optProvince" onchange="ChangeCity()">
+					<option>--请选择--</option>
+					<option>广东省</option>
+					<option>湖南省</option>
+					<option>浙江省</option>
+			</select>
+			城市:
+			<select name="optCity">
+					<option>--请选择--</option>
+			</select>
+	</form>
+	<script>
+			var aCity = new Array();
+			aCity[0] = new Array();
+			aCity[1] = new Array();
+			aCity[2] = new Array();
+			aCity[3] = new Array();
+
+			aCity[0][0] = '--请选择--';
+
+			aCity[1][0] = '--请选择--';
+			aCity[1][1] = '广州市';
+			aCity[1][2] = '深圳市';
+			aCity[1][3] = '珠海市';
+			aCity[1][4] = '汕头市';
+			aCity[1][5] = '佛山市';
+
+			aCity[2][0]	= '--请选择--';
+			aCity[2][1]	= '长沙市';
+			aCity[2][2]	= '株洲市';
+			aCity[2][3]	= '湘潭市';
+
+			aCity[3][0] = '--请选择--';
+			aCity[3][1] = '杭州市';
+			aCity[3][2] = '苏州市';
+			aCity[3][3] = '温州市';
+
+			function ChangeCity(){
+				var i,iProviceIndex;
+				iProviceIndex=document.frm.optProvince.selectedIndex; //获取所选择省份的序号
+				iCityCount=0;
+				//计算所选的省份内有多少个城市
+				while(aCity[iProviceIndex][iCityCount]!=null)
+						iCityCount++;
+				//将表单中城市数组的长度更改为新选省份所含的城市数量
+				document.frm.optCity.length=iCityCount;
+				//将城市名称添加到表单中城市的下拉列表中
+				for(i=0;i<iCityCount;i++)
+						document.frm.optCity[i]=new
+						Option(aCity[iProviceIndex][i]);
+				//让表单中的城市控件获取焦点
+				document.frm.optCity.focus();
+			}
+	</script>
+</body>
+</html>

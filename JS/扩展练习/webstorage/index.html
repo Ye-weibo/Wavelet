@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript">
+		function MyClick1(){
+			var username = $("#txtUserName").val();
+			var pwd = $("#txtPwd").val();
+			// sessionStorage.setItem("K_username",username);
+			// sessionStorage.setItem("K_pwd",pwd);
+			localStorage.setItem("K_username",username);
+			localStorage.setItem("K_pwd",pwd);
+			alert("存储成功");
+		}
+		function MyClick2(){
+			// alert(sessionStorage.getItem("K_username)"));
+			// alert(sessionStorage.getItem("K_pwd)"));
+			alert(localStorage.getItem("K_username"));
+			alert(localStorage.getItem("K_pwd"));
+		}
+	</script>
+</head>
+<body>
+	<input type="text" id="txtUserName"/>
+	<input type="password" id="txtPwd"/>
+	<input type="button" value="按钮1" onclick="MyClick1()" />
+	<input type="button" value="按钮2" onclick="MyClick2()" />
+</body>
+</html>

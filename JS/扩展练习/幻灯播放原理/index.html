@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function play(width,height,num,time) {
+			this.width = width;
+			this.height = height;
+			this.num = num;
+			this.time = time*1000;
+			this.auto=function(){
+				alert(this.width+' '+this.height+' '+this.num+' '+this.time)
+			}
+			this.zhi=function(){
+
+			}
+		}
+			var p = new play(400,300,10,3);
+			p.auto();
+	</script>
+
+</body>
+</html>

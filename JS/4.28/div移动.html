@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="js/TweenMax.min.js"></script>
+	<style>
+		#box{
+			width: 100px;
+			height: 100px;
+			background: red;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+	</style>
+</head>
+<body>
+	<div id="box"></div>
+	<script>
+		//	var t = new TimelineMax();
+			//规定目标点的运动
+//			t.to( "#box",5,{
+//				left : 300,
+//			} )
+			
+//			规定起始点的运动
+//			t.from( "#box",5,{
+//				left : 300,
+//			} )
+			
+			var t = new TimelineMax();
+			t.to("#box",3,{
+				left:200,
+			})
+	</script>
+</body>
+</html>

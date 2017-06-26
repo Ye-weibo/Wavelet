@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>获取焦点</title>
+</head>
+<body>
+	<form name="frm">
+				user:<input type="text" name="user" /><br />
+				age:<input type="text" id="age" name="age" /><br />
+				address:<input type="text" id="address" /><br />
+	</form>
+	<script>
+				document.frm.age.focus(); //IE不适用
+	</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	var myMoney : int = 128;
+	var cookiePrice : int = 33;
+	// Calculate the change if the maximum number of cookies are bought.
+	var change : int = myMoney % cookiePrice;
+	// Calculate number of cookies bought.
+	var numCookies : int = Math.round((myMoney-change)/cookiePrice);
+	</script>
+</body>
+</html>

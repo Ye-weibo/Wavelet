@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>带缩略图的图片</title>
+	<style>
+		div{margin: 0 auto;}
+		#content{width: 700px;height: 500px;border: 2px solid black;position: relative;}
+		#img{width: 700px;height: 420px;}
+		.div_span{width: 700px;height: 80px;text-align: center;line-height: 80px;color: gray;cursor: pointer;}
+		ul{margin: 0;display: inline-block;padding: 0;}
+		li{list-style: none;visibility: hidden;}
+		.one_photo,.two_photo,.three_photo,.four_photo,.five_photo{margin: 0 auto;width: 50px;height: 30px;border: 1px solid gray;}
+		.one_photo{position: absolute;top: 420px;left: 275px;}
+		.two_photo{position: absolute;top: 420px;left: 300px;}
+		.three_photo{position: absolute;top: 420px;left: 325px;}
+		.four_photo{position: absolute;top: 420px;left: 350px;}
+		.five_photo{position: absolute;top: 420px;left: 375px;}
+		#left_button,#right_button{outline: none;position: absolute;cursor: pointer;}
+		#left_button{top: 200px;}
+		#right_button{top: 200px;left: 655px;}
+	</style>
+</head>
+<body>
+		<div id="content">
+			<div><img src="one.jpg" id="img"></div>
+			<input type="button" id="left_button" style="background:url(left.png) no-repeat;width: 44px;height: 44px;">
+			<input type="button" id="right_button" style="background:url(right.png) no-repeat;width: 44px;height: 44px;">
+			<div class="div_span">
+				<span>●</span>
+				<span>●</span>
+				<span>●</span>
+				<span>●</span>
+				<span>●</span>
+			</div>
+			<ul>
+				<li><img src="one.jpg" class="one_photo"></li>
+				<li><img src="two.jpg" class="two_photo"></li>
+				<li><img src="three.jpg" class="three_photo"></li>
+				<li><img src="four.jpg" class="four_photo"></li>
+				<li><img src="five.jpg" class="five_photo"></li>
+			</ul>
+		</div>
+		
+		<script>
+		var oImg = document.getElementById('img');
+		var oLeft = document.getElementById('left_button');
+		var oRight = document.getElementById('right_button');
+		var aSpan = document.getElementsByTagName('span');
+		var aLi = document.getElementsByTagName('li');
+		var arr = ['one.jpg','two.jpg','three.jpg','four.jpg','five.jpg'];
+		var num = 0;
+
+		for(var i=0;i<aSpan.length;i++){
+			aSpan[i].index=i;
+			aSpan[i].onmousemove=function(){
+				aLi[this.index].style.visibility='visible';
+				aSpan[this.index].style.color='black';
+			}
+			aSpan[i].onmouseout=function(){
+				aLi[this.index].style.visibility='hidden';
+				aSpan[this.index].style.color='gray';
+			}
+			aSpan[i].onclick=function(){
+				oImg.src=arr[this.index];
+			}
+		}
+		oRight.onclick = function(){
+			num++;
+			if (num<5) {
+				oImg.src=arr[num];
+			}else{
+				num=5;
+				alert('亲！这已经是最后一张');
+			}
+		}
+		oLeft.onclick = function(){
+			if (num>0) {
+				oImg.src=arr[num-1];
+				num--;
+			}else{
+				num=0;
+				alert('亲！这已经是第一张');
+			}
+		}
+		</script>
+</body>
+</html>

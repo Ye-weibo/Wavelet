@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery-1.8.3.js"></script>
+	<style>
+		div{
+			position: relative;
+			top: 10px;
+			margin: 400px;
+		}
+		img{
+			width: 600px;
+			height: 300px;
+		}
+	</style>
+</head>
+<body>
+	<div><img _src="i17.jpg" src="i17.jpg"></div>
+	<div><img _src="i18.jpg"></div>
+	<div><img _src="i19.jpg"></div>
+	<div><img _src="i20.jpg"></div>
+	<div><img _src="i21.jpg"></div>
+
+	<script>
+		$(function(){
+			$(document).scroll(function(){
+				$('img').each(function(i,elem){
+					// console.log(i); //获取下标 
+					// console.log(elem); //获取最大的div
+					if($(elem).offset().top < $(document).scrollTop() + $(window).height()){
+						$(elem).attr('src',$(this).attr('_src'))
+					}
+				})
+			})
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<script>
+		// getTime方法：返回自1970年的1月1日0点0分0秒算起,至Date对象实例代表的时间为止的毫秒数
+		var current_time = new Date();
+		var strDate = current_time.getYear()+"年";
+		strDate += current_time.getMonth()+'月';
+		strDate += current_time.getDate()+'日';
+		strDate += current_time.getHours()+':';
+		strDate += current_time.getMinutes()+':';
+		strDate += current_time.getSeconds();
+		alert(strDate);
+	</script>
+</body>
+</html>

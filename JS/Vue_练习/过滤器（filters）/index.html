@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+	<template>
+       <div class="file-pro-state" 
+       v-bind:class="scope.row.state | filterName ('className')">
+       {{scope.row.state| filterName ('txt')}}
+       </div>
+   </template>
+   <script>
+	       export default{
+	              data(){
+	                     return{
+	                            dataName:[{
+									       state:0
+									},{
+									       state:1
+									}]
+									}
+									},
+									              filters:{
+									       filterName(class,text){
+									              letfilterCont = {
+									       0:{
+									       className:’over’,
+									       txt:’已完成’
+									},
+									1:{
+									       className:’todo’,
+									       txt:’未开始’
+									}
+								}
+							}
+									 
+					}
+			}
+</script>
+</body>
+</html>

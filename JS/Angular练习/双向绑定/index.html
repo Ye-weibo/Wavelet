@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+<body>
+	<div ng-app="myApp" ng-controller="myTry">
+		<p>渲染为：	{{name}}</p>
+		<input type="text" ng-model="name">
+		<!-- <input type="button" value="同步"> -->
+	</div>
+	<script>
+		// var aInp =document.getElementsByTagName('input');
+
+		// aInp[1].onclick=function(){
+		// 	alert("渲染为："+aInp[0].value);
+		// }
+		var app =angular.module('myApp',[]);
+		app.controller('myTry',function($scope){ //scope:作用域
+			$scope.name = "";
+		})
+	</script>
+</body>
+</html>

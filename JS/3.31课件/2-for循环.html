@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div{
+			position: absolute;
+			width: 50px;
+			height: 50px;
+			background: red;
+			color: #fff;
+			font-size: 18px;
+			text-align: center;
+			line-height: 50px;
+		}
+	</style>
+</head>
+<body>
+<!-- <div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div> -->
+
+	
+</body>
+<script>
+for (var i = 1; i < 11; i++) {
+	document.getElementsByTagName('body')[0].innerHTML += '<div>'+i+'</div>';
+}
+// 0 0
+// 1 50
+// 2 100 
+// 3 150
+// 4 200
+// 5 250
+// 6 200 2 
+// 7 150  4
+// 8 100  6
+// 9 50   8
+var j = 2;
+for (var i = 0; i < 10; i++) {
+	if (i<6) {
+		document.getElementsByTagName('div')[i].style.left = i*50 +'px';
+		document.getElementsByTagName('div')[i].style.top = i*50 +'px';
+	}else{
+		document.getElementsByTagName('div')[i].style.left = i*50 +'px';
+
+		document.getElementsByTagName('div')[i].style.top = (i-j)*50 +'px';
+		j +=2;
+		
+	}
+	
+}
+ 
+</script>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+
+	<div></div>
+
+
+
+	<script>
+		var aDiv = document.getElementsByTagName('div')[0];
+		// aDiv.name = 'meiv';
+		//  alert( aDiv.name)
+
+
+		 for (var i = 0; i < 100; i++) {
+		 	aDiv.innerHTML += '<button>按钮</button> ';
+		 }
+
+		var aBtn = document.getElementsByTagName('button');
+		 for (var i = 0; i < aBtn.length; i++) {
+		 	aBtn[i].index = i;
+		 	aBtn[i].onclick = function(){
+		 		alert(this.index)
+		 	}
+		 }
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<style>
+#div1{ width:100px; height:100px; background:red; position:absolute;}
+</style>
+<script>
+
+
+
+// 改成面向对象
+// 全局变量就是属性
+// 函数就是方法
+// Onload中创建对象
+// 改this指向问题
+// 
+window.onload = function(){
+	var darg1 = new Darg();
+	darg1.init();
+}
+
+function Darg(){
+	this.oDiv = document.getElementById('div1');
+	this.disX = 0;
+	this.disY = 0;
+}
+Darg.prototype.init = function(){
+	var This = this;
+	this.oDiv.onmousedown = function(ev){
+		// console.log(this)
+		var ev = ev || window.event;
+		This.drag(ev);
+	}
+
+}
+Darg.prototype.drag = function(ev){
+	var This = this;
+	this.disX = ev.clientX - this.oDiv.offsetLeft;
+	this.disY = ev.clientY - this.oDiv.offsetTop;
+	
+	document.onmousemove = function(ev){
+		var ev = ev || window.event;
+		This.fnMove(ev);
+	};
+	
+	document.onmouseup = this.fnUp;
+	return false;
+}
+Darg.prototype.fnMove = function(ev){
+// console.log(this)
+	
+	this.oDiv.style.left = ev.clientX - this.disX + 'px';
+	this.oDiv.style.top = ev.clientY - this.disY + 'px';
+}
+Darg.prototype.fnUp = function(){
+	document.onmousemove = null;
+	document.onmouseup = null;
+}
+
+
+
+
+
+
+
+
+</script>
+</head>
+
+<body>
+<div id="div1"></div>
+</body>
+</html>

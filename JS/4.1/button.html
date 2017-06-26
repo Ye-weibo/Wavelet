@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body id="body">
+	<script>
+	var aBody = document.getElementsByTagName('body');
+	var aButton = document.getElementsByTagName('button');
+	for (var i=0; i<100; i++) {
+		aBody[0].innerHTML+= '<button>按钮</button>'
+	}
+	
+	for (var i=0; i<100; i++) {
+		aButton[i].name = i ;
+	aButton[i].onclick = function () {
+		alert(this.name)
+		}
+	}
+	</script> 
+</body>
+</html>

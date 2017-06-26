@@ -1,0 +1,16 @@
+body{margin: 0;font-size: 14px;background-color: #fafafa;}
+ul{margin: 0;padding: 0;}
+li{list-style: none;}
+header{width: 100%;height: 30px;font-weight: bold;color: #fff;line-height: 30px;text-align: center;background-color: #db4c3f;}
+.content{width: 50%;margin: 0px auto;}
+.text-input{width: 100%;height: 30px;}
+.list{display: flex;margin: 10px 0;}
+.list li:nth-child(1){padding: 5px 0 0 10px;}
+.list li{padding-left: 10px;flex: 1;color: #dd4b39;}
+.list a{margin: 0 10px;flex: 1;padding: 5px 0;color: #777;text-decoration: none;border: 1px solid rgba(175, 47, 47, 0.2);}
+.list .action{text-align: center;display: flex;}
+.text{background-color: #fff;}
+.text-span{padding: 10px 0 10px 10px;display: block;border-bottom: 1px solid #ededed; color: #777;}
+.text li{width: 100%;height: 30px;border-bottom: 1px solid #ededed;}
+button{float: right;border: 0;border-radius: 50%;background-color: red;}
+.checkbox{float: left;}

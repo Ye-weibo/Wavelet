@@ -1,0 +1,33 @@
+body,h3{margin: 0;}
+img{border: 0;}
+.wrap{width: 1903px;height: 923px;background-color: #16a085;}
+#particles{width: 1903px;height: 100%;overflow: hidden;}
+.intro{position: absolute;left: 0;top: 50%;width: 1903px;}
+/*into进入个人简历*/
+.into{position: relative;top: 200px;left: 48%;width: 128px;height: 123px;background: url(../images/username.png) no-repeat;}
+.into span:nth-of-type(1){display: block;position: relative;top: 200px;left: -175px;width: 600px;font-size: 32px;font-family: "微软雅黑";font-weight: bold;color: #ccc;}
+.into span:nth-of-type(2){display: block;position: relative;top: 260px;left: -15px;width: 600px;font-size: 32px;font-family: "微软雅黑";font-weight: bold;color: #ccc;cursor: pointer;}
+.into .About_two:hover{text-decoration: underline;color: #fff;}
+/*内容部分*/
+.content_box{width: 60%;height: 800px;position: relative;left: 20%;top: -50px;border-radius: 2em 2em 2em 2em;background-color: green;}
+.return{position: relative;left: 1100px;top: 5px;cursor: pointer;}
+.content_box .left_box{position: relative;left: 30px;width: 270px;height: 750px;}
+.left_box .Avtar{position: relative;left: 25%; width: 50%;height: 125px;border-radius: 50%;background: url(../images/user.png) 50% no-repeat;background-size: 125px 125px;background-color: #fff;}
+.left_box h3{position: relative;left: 28%;top: 10px;font-size: 14px;font-weight: bold;color: #ccc;}
+.left_box .Information{position: relative;top: 30px;width: 100%;height: 300px;}
+.Information .top,.footer_top{width: 100%;height: 30px;}
+.Information .top span{position: relative;left: 16px;top: 2px;font-size: 24px;color: #fff;}
+.Information .top img:nth-of-type(1){width: 32px;float: left;}
+.Information .top img:nth-of-type(2){width: 120px;height: 30px;float: right;}
+.Information .center{width: 100%;height: 270px;position: relative;top: 10px;}
+.Information .center .center_content{width: 100%;height: 54px;}
+.Information .center .set{position: relative;left: -32px;top: 10px;}
+.Information .center .old,.address,.phone,.email{position: relative;left: 0px;top: 10px;}
+.Information .center .span_one{position: relative;left: -22px;font-size: 14px;font-weight: bold;color: #ccc;}
+.Information .center .span_two,.span_three,.span_four,.span_five{position: relative;left: 10px;font-size: 14px;font-weight: bold;color: #ccc;}
+.Information .footer_top{position: relative;top: 10px;}
+.Information .footer_top img:nth-of-type(1){width: 32px;float: left;}
+.Information .footer_top img:nth-of-type(2){width: 120px;height: 30px;float: right;}
+.Information .footer_top span{position: relative;left: 16px;top: 2px;font-size: 24px;color: #fff;}
+.Information .footer_content{position: relative;top: 50px;width: 100%;height: 220px;}
+.Information .footer_content span{color: #fff;font-weight: bold;}

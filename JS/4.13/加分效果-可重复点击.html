@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>加分</title>
+	<style>
+		div{width: 300px;height: 20px;border: 1px solid black;margin: 100px 0 0 100px;text-align: center;}
+		span{position: absolute;top:0;color: #000000;}
+	</style>
+</head>
+<body>
+	<div>
+		<span>+1</span>
+		<span>+1</span>
+		<span>+1</span>
+		<span>+1</span>
+		<span>+1</span>
+		<span>+1</span>
+		<span>+1</span>
+		<span>+1</span>
+		<span>+1</span>
+		<span>+1</span>
+		<span>+1</span>
+		<span>+1</span>
+	</div>
+	<script>
+	var aSpan = document.getElementsByTagName('span');
+	var num = 0;
+	var timer = null;
+	var disappear = null;
+	var colorArr = ["#000000","#696969","#808080","#A9A9A9","#C0C0C0","#D3D3D3","#DCDCDC","#F5F5F5","#fff"];
+	function getStyle(obj,dir){
+		if(obj.currentStyle) {
+			return obj.currentStyle[dir];
+		}else{
+			return getComputedStyle(obj)[dir];
+		}
+	}
+	for (var i = 0; i < aSpan.length; i++) {
+			aSpan[i].style.left=25*i+'px';
+			aSpan[i].style.top=100+'px';
+			aSpan[i].style.textIndent=110+'px';
+		}
+	Move=function(){
+		for (var i = 0; i <=num; i++) {
+			if (parseInt(getStyle(aSpan[i],'top'))>50) {
+				aSpan[i].style.top=parseInt(getStyle(aSpan[i],'top'))+(-10)+'px';
+				aSpan[i].style.color=colorArr[6]; //改变字体颜色 （渐变未有效果）
+			}
+		}if (num<aSpan.length-1) {
+				num++;
+			}
+	}
+	window.onclick=function(){
+		clearInterval(timer)
+		timer=setInterval(
+			Move
+		,100)
+	}
+	// function gradientColor(startColor,endColor,step){
+ //       startRGB = this.colorRgb(startColor);//转换为rgb数组模式
+ //       startR = startRGB[0];
+ //       startG = startRGB[1];
+ //       startB = startRGB[2];
+
+ //       endRGB = this.colorRgb(endColor);
+ //       endR = endRGB[0];
+ //       endG = endRGB[1];
+ //       endB = endRGB[2];
+
+ //       sR = (endR-startR)/step;//总差值
+ //       sG = (endG-startG)/step;
+ //       sB = (endB-startB)/step;
+
+ //       for(var i=0;i<step;i++){
+	// 	   //计算每一步的hex值 
+ //           var hex = this.colorHex('rgb('+parseInt((sR*i+startR))+','+parseInt((sG*i+startG))+','+parseInt((sB*i+startB))+')');
+ //           colorArr.push(hex);
+ //       }
+ //       return colorArr;
+ //   }
+	</script>
+</body>
+</html>

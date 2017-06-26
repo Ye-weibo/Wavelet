@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Document</title>
+	<script>
+		window.onload=function(){
+			var oBtn = document.getElementById('button');
+
+			oBtn.onclick=function(){
+				var xhr = null;
+				try {
+					xhr = new XMLHttpRequest();
+				} catch (e) {
+					xhr = new ActiveXObject('Microsoft.XMLHTTP'); //Microsoft.XMLHTTP：数据库远程管理技术
+				}
+				xhr.open('post','2.post.php',true);
+				//post方式，数据放在send()里面作为参数传递
+				xhr.setRequestHeader('content-type', 'application/x-www-form-urlencoded');//申明发送的数据类型
+				//post没有缓存问题
+				//无需编码
+				xhr.send('username=伟&age=301');
+				
+				xhr.onreadystatechange = function() {
+					
+					if ( xhr.readyState == 4 ) {
+						if ( xhr.status == 200 ) {
+							alert( xhr.responseText );
+						} else {
+							alert('出错了,Err：' + xhr.status);
+						}
+					}
+					
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<button type="button" id="button" value="按钮">点击获取</button>
+</body>
+</html>

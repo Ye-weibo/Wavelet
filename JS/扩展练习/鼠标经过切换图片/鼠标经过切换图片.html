@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>鼠标经过切换图片</title>
+	<style>
+		img{
+			width: 500px;
+			height: 500px;
+		}
+	</style>
+</head>
+<body>
+	<img src="one.jpg" onmouseover="change()" onmouseout="change()" id="pic" />
+	<script>
+	function change() {
+		picname=pic.src.substr(pic.src.lastIndexOf('/')+1);
+		if (picname=="one.jpg")
+			pic.src="two.jpg";
+		else
+			pic.src="one.jpg";
+	}
+	</script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DIV掉落</title>
+	<style>
+		div{
+			width: 50px;
+			height: 50px;
+			border-radius: 50px;
+			background-color: gray;
+			text-align: center;
+			line-height: 50px;
+			position: absolute;
+			left: 10px;
+			top: 0px;
+		}
+	</style>
+</head>
+<body>
+	<script>
+	var oBody = document.getElementsByTagName('body')[0];
+	var aDiv = oBody.getElementsByTagName('div');
+	var len = 10;
+	var num = 0;
+	var a=true;
+	var timer1 = null;
+	var timer2 = null;
+	for (var i = 0; i < len; i++) {
+		oBody.innerHTML+='<div>'+(i+1)+'</div>'
+		aDiv[i].style.left=60*i+'px';
+	}
+	function getStyle(obj,dir){
+		if(obj.currentStyle) {
+			return obj.currentStyle[dir];
+		}else{
+			return getComputedStyle(obj)[dir];
+		}
+	}
+		window.onclick=function(){
+			if (a) {
+				num=0;
+			clearInterval(timer2)
+			timer1=setInterval(
+				Move
+			,40)
+			a = false;
+			}else{
+				num=0;
+			clearInterval(timer1)
+			timer2=setInterval(
+				Home
+			,40)
+			a = true;
+			}
+	}
+	function Move (){
+				for(var i=0;i<=num;i++){
+					if (parseInt(getStyle(aDiv[i],'top'))<500) {
+						aDiv[i].style.top=parseInt(getStyle(aDiv[i],'top'))+50+'px';
+					}
+				}if (num<len-1) {
+					num++;
+				}
+	}
+	function Home (){
+				for(var i=0;i<=num;i++){
+					if (parseInt(getStyle(aDiv[i],'top'))>0) {
+						aDiv[i].style.top=parseInt(getStyle(aDiv[i],'top'))+(-50)+'px';
+					}
+				}if (num<len-1) {
+					num++;
+				}
+	}
+	</script>
+</body>
+</html>

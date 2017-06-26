@@ -1,0 +1,36 @@
+标签：<canvas></canvas>
+
+绘制环境
+	getContext('2d') : 目前支持2D的场景   //webgl  3D
+
+绘制方块
+	fillRect(L,T,W,H): 默认颜色是黑色
+	strokeRect(L,T,W,H): 带边框的方块 默认1像素黑色边框
+设置绘图
+	fillStyle : 填充颜色(绘制canvas)是有顺序的
+	lineWidth: 线宽度，是一个数值
+	strokeStyle: 边框颜色
+边界绘制
+	lineJoin: 边界连接点样式
+	-miter(默认) round(圆角) bevel(斜角)
+	lineCap: 端点样式
+	-butt(默认) round(圆角) square(高度多出为宽一半的值)
+绘制路径
+	beginPath: 开始绘制路径
+	moveTo : 移动到绘制的新目标点
+	lineTo : 新的目标点
+	closePath: 结束绘制路径
+
+	stroke : 画线，默认黑色
+	fill : 填充，默认黑色
+	rect(L,T,W,H) : 矩形区域
+	clearRect(0,0,oc.width,oc.height) : 删除一个画布的矩形区域
+	save : 保存路径
+		beginPath: 开始绘制路径
+		moveTo : 移动到绘制的新目标点
+		lineTo : 新的目标点
+		closePath: 结束绘制路径
+		....
+	restore : 恢复路径
+	 
+	

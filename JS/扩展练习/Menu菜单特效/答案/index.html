@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		/* 所有元素的填充和边距都清零，写CSS样式前要统一浏览器的默认样式 */
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		#menu{
+			width: 300px;
+			height: 40px;
+			/* 溢出隐藏 */
+			overflow: hidden;
+			/* 居中显示 */
+			margin: 100px auto;
+			/* 边框圆角 */
+			border-radius: 10px 10px 0px 0px;
+			/* 盒子阴影 */
+			box-shadow: 1px 1px 5px 0px #999;
+			/* 所有的属性都将得到过渡，过渡的时间持续1s */
+			transition: all 1s;
+		}
+		/* :hover用于选择鼠标指针浮动在上面的元素 */
+		#menu:hover{
+			height: 286px;
+		}
+		#menu h1{
+			height: 40px;
+			background: #f90;
+			font-size: 20px;
+			color: #fff;
+			line-height: 40px;
+			padding-left: 10px;
+			transition: 1s;
+		}
+		#menu:hover h1{
+			background: #333;
+		}
+		#menu li{
+			/* 去掉列表样式 */
+			list-style: none;
+			height: 40px;
+			line-height: 40px;
+			background: #fc0;
+			padding-left: 10px;
+			border-top: 1px #eee solid;
+			transition: all 0.5s;
+		}
+		#menu li:hover{
+			background: #f90;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<div id="menu">
+		<h1>Menu</h1>
+		<ul>
+			<li>HTML5+CSS3</li>
+			<li>JavaScript</li>
+			<li>jQuery</li>
+			<li>Bootstrap</li>
+			<li>Canvas</li>
+			<li>AngularJS</li>
+		</ul>
+	</div>
+</body>
+</html>

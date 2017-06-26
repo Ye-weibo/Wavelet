@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input value="" type="text">
+	<input type="button" value="验证" onclick="change()">
+	
+	<script>
+		var oInp = document.getElementsByTagName('input')[0];
+		//身份证正则表达式(15位)
+		var isIDCard1=/^[1-9]\d{7}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}$/;
+		//身份证正则表达式(18位)
+		var isIDCard2=/^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{4}$/;
+		//身份证正则合并
+		var IDCard=/(^\d{15}$)|(^\d{17}([0-9]|X)$)/;
+
+		function change(){
+			if(oInp.value == ''){
+				alert('请输入身份证号码');
+			}else
+				if(IDCard.test(oInp.value)){
+				alert('身份证号码正确');
+			}else{
+				alert('请输入正确的身份');
+			}
+		}
+	</script>
+</body>
+</html>

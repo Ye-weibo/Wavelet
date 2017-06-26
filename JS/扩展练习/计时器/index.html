@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#main{
+			width: 500px;
+			height: 300px;
+			font-size: 50px;
+			font-weight: bold;
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<div id="main"></div>
+	<script>
+			//必须有<html><head><body>才能使下面的代码在IE中起作用
+			var dt=setInterval("change()",1000);
+			var m=document.getElementById('main');
+			var i=0;
+			function change(){
+					m.innerHTML=i; //Firefox不支持innerText
+					i++;
+			}
+	</script>
+</body>
+</html>

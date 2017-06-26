@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>图片切换</title>
+	<style>
+		div,img{
+			margin: 0 auto;
+			width: 400px;
+			height: 500px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<div><img id="img" src="fengjie.jpg"></div>
+
+	<script>
+		var oImg = document.getElementById('img');
+		var num = 0;
+
+		var aImg = ['fengjie.jpg ','fengjie1.jpg','fengjie2.jpg','fengjie3.jpg','taoyan.jpg'];
+
+		oImg.onclick = function(){
+			if (num<5) {
+				oImg.src = aImg[num];
+				num ++;
+			}else{
+				num = 0;
+				oImg.src = aImg[num];
+			}
+		}
+	</script>
+</body>
+</html>

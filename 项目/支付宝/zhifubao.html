@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=EDGE">
+	<title>支付宝 知托付 !</title>
+	<link rel="stylesheet" href="css/zhifubao.css">
+	<link rel="stylesheet" href="css/swiper.css">
+	<script src="src/jquery-1.11.0.min.js"></script>
+	<script src="src/swiper.js"></script>
+	<script src="src/zhifubao.js"></script>
+</head>
+<body>
+	<!-- Nav start -->
+		<div class="header" style="z-index: 100;position: fixed;">
+			<div class="top_nav">
+				<ul class="left">
+					<li>
+						<a href="javascript:;">个人</a>
+					</li>
+					<li>
+						<a href="javascript:;">企业</a>
+					</li>
+					<li>
+						<a href="javascript:;">合作伙伴</a>
+					</li>
+				</ul>
+				<ul class="right">
+					<li>
+						<a href="javascript:;">支付宝APP</a>
+					</li>
+					<li class="line"></li>
+					<li id="list-block">
+						<a href="javascript:;">客户服务<i></i></a>
+						<div class="select" style="display: none;z-index: 1;">
+							<a href="javascript:;">服务大厅</a>
+							<a href="javascript:;">自助服务</a>
+							<a href="javascript:;">提建议</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="bottom_nav">
+				<div class="laywid">
+					<div class="paylogo"></div>
+					<div class="minmenu">
+						<ul>
+							<li><a href="javascript:;">首页</a></li>
+							<li><a href="javascript:;" class="menunav">财富中心</a>
+								<div class="downlist" style="display: none;">
+									<div class="together">
+										<div class="close">×</div>
+										<div class="tp">
+											<a href="javascript:;">余额宝</a>
+											<a href="javascript:;">招财宝</a>
+											<a href="javascript:;">存金宝</a>
+											<a href="javascript:;">淘理财</a>
+											<a href="javascript:;">蚂蚁达客</a>
+										</div>
+									</div>
+									<div class="ft">
+										<span>财富中心</span>
+									</div>
+								</div>
+							</li>
+							<li><a href="javascript:;" class="menunav">安全保障</a>
+								<div class="downlist" style="display: none;">
+									<div class="together">
+										<div class="close">×</div>
+										<div class="tp">
+											<a href="javascript:;">安全中心</a>
+											<a href="javascript:;">会员保障</a>
+										</div>
+									</div>
+									<div class="ft">
+										<span>安全保障</span>
+									</div>
+								</div>
+							</li>
+							<li class="line"></li>
+							<li><a href="javascript:;" class="menunav">商家中心</a>
+								<div class="downlist" style="display: none;">
+									<div class="together">
+										<div class="close">×</div>
+										<div class="tp">
+											<a href="javascript:;">支付宝商家</a>
+											<a href="javascript:;">口碑商家</a>
+										</div>
+									</div>
+									<div class="ft">
+										<span>商家中心</span>
+									</div>
+								</div>
+							</li>
+							<li><a href="javascript:;">开放平台</a></li>
+						</ul>
+						<dl class="goin" style="display: none;">
+							<dd>
+								<a class="login" href="javascript:;">登录</a>
+							</dd>
+							<dd>
+								<a class="register" href="javascript:;">注册</a>
+							</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+	</div>
+	<!-- Nav end -->
+	<!-- Content start -->
+	<div class="swiper-container">
+	    <div class="swiper-wrapper">
+	        <div class="swiper-slide">
+	        	<video id="myvideo" src="https://t.alipayobjects.com/images/T1T78eXapfXXXXXXXX.mp4" loop="loop" autoplay="autoplay" type="video/mp4"></video>
+	        	<div class="video-mask" style="z-index: 99"></div>
+	        	<div class="main-content">
+	        		<div class="laymid">
+	        			<div class="logo"></div>
+	        			<div class="click-me clearfix">
+	        				<a class="denglu" href="javascript:;" alt="登录">登录</a>
+	        				<a class="zhuce" href="javascript:;" alt="注册">立即注册</a>
+	        			</div>
+	        		<img class="play-video" src="images/play.png" alt="点击播放">
+	        		</div>
+	        	</div>
+	        </div>
+	        <div class="swiper-slide">
+	        	<div class="big-bg"></div>
+	        	<div class="con-img">
+	        		<img src="images/cloudS.png">
+	        		<img src="images/cloudB.png">
+	        		<img src="images/cloudM.png">
+	        		<img src="images/cloud.png">
+	        		<img id="img-font" src="images/font.png">
+	        		<img src="images/renwu.png">
+	        	</div>
+	        	<div class="con-bf">
+	        		<div class="con-content">
+	        			<div class="content-top">
+	        				<div class="content-text">
+	        					<i class="icon-img"></i>
+	        					<div class="text">
+	        						<p>转账付款</p>
+	        						<span>转到支付宝账户，瞬间到账 | 转到银行卡，2小时到账</span>
+	        					</div>
+	        				</div>
+	        			</div>
+	        		</div>
+	        	</div>
+	        </div>
+	        <div class="swiper-slide">
+	        	<div class="big-bg1"></div>
+	        	<div class="con-img1">
+	        		<img id="img-font" src="images/bg1.png">
+	        		<img src="images/bg2.png">
+	        		<img src="images/bg3.png">
+	        	</div>
+	        	<div class="con-bf">
+	        		<div class="con-content">
+	        			<div class="content-top">
+	        				<div class="content-one">
+	        					<i class="icon-img img1"></i>
+	        					<div class="text1">
+									<p>扫描二维码或条码付款</p>
+									<span>自动识别不安全链接，安心付款</span>
+	        					</div>
+	        				</div>
+	        				<div class="content-two">
+	        					<i class="icon-img img2"></i>
+	        					<div class="text1">
+	        						<p>出示付款码付款</p>
+	        						<span>付款码每次不同，保障付款安全</span>
+	        					</div>
+	        				</div>
+	        				<div class="content-three">
+	        					<i class="icon-img img3"></i>
+	        					<div class="text1">
+									<p>通过声波收付款</p>
+									<span>没有网络也能收款付款</span>
+	        					</div>
+	        				</div>
+	        			</div>
+	        		</div>
+	        	</div>
+	        </div>
+	        <div class="swiper-slide">
+	        	<div class="big-bg2"></div>
+	        	<div class="con-img2">
+	        		<img id="img-font" src="images/bg4.png">
+	        	</div>
+	        	<div class="con-bf">
+	        		<div class="con-content">
+	        			<div class="content-top">
+	        				<div class="content-four">
+	        					<i class="icon-img img4"></i>
+	        					<div class="text1">
+									<p>国际运输</p>
+									<span>如淘宝购物般简单，无需办理转运</span>
+	        					</div>
+	        				</div>
+	        				<div class="content-five">
+	        					<i class="icon-img img5"></i>
+	        					<div class="text1">
+	        						<p>品牌正品</p>
+	        						<span>海外商家直发，100%正品保证</span>
+	        					</div>
+	        				</div>
+	        				<div class="content-six">
+	        					<i class="icon-img img6"></i>
+	        					<div class="text1">
+									<p>人民币付款</p>
+									<span>无需外币兑换费，无需双币种信用卡</span>
+	        					</div>
+	        				</div>
+	        			</div>
+	        		</div>
+	        	</div>
+	        </div>
+	        <div class="swiper-slide">
+				<div class="big-bg3"></div>
+				<div class="mask" style="z-index: 99"></div>
+	        	<div class="con-img3">
+	        		<img id="img-font" src="images/bg5.png">
+	        	</div>
+	        	<div class="con-bf">
+	        		<div class="con-content">
+	        			<div class="content-top">
+	        				<div class="content-w4">
+	        					<i class="icon-img img7"></i>
+	        					<div class="text1">
+									<p>赚的更多</p>
+									<span>定期稳定收益，让你赚更多</span>
+	        					</div>
+	        				</div>
+	        				<div class="content-w4">
+	        					<i class="icon-img img8"></i>
+	        					<div class="text1">
+	        						<p>安全保障</p>
+	        						<span>权威金融机构负责风险管理</span>
+	        					</div>
+	        				</div>
+	        				<div class="content-w4">
+	        					<i class="icon-img img9"></i>
+	        					<div class="text1">
+									<p>买的方便</p>
+									<span>一键预约购买，自动匹配成交</span>
+	        					</div>
+	        				</div>
+	        				<div class="content-w4">
+	        					<i class="icon-img img10"></i>
+	        					<div class="text1">
+									<p>灵活变现</p>
+									<span>产品到期前，急用钱时可提前变现</span>
+	        					</div>
+	        				</div>
+	        			</div>
+	        		</div>
+	        	</div>
+	        </div>
+	        <div class="swiper-slide">
+				<div class="big-bg4"></div>
+	        	<div class="con-img4">
+	        		<img id="img-font" src="images/bg6.png">
+	        	</div>
+	        	<div class="con-bf">
+	        		<div class="con-content">
+	        			<div class="content-top">
+	        				<div class="content-w4">
+	        					<i class="icon-img img11"></i>
+	        					<div class="text1">
+									<p>挂号</p>
+									<span>余号查询，足不出户就能挂号</span>
+	        					</div>
+	        				</div>
+	        				<div class="content-w4">
+	        					<i class="icon-img img12"></i>
+	        					<div class="text1">
+	        						<p>智能导诊</p>
+	        						<span>叫号与导航，按时到达科室不迷路</span>
+	        					</div>
+	        				</div>
+	        				<div class="content-w4">
+	        					<i class="icon-img img13"></i>
+	        					<div class="text1">
+									<p>付医药费</p>
+									<span>手机支付，各类医药费边走边付</span>
+	        					</div>
+	        				</div>
+	        				<div class="content-w4">
+	        					<i class="icon-img img14"></i>
+	        					<div class="text1">
+									<p>查看报告</p>
+									<span>消息通知，随时查看就诊报告</span>
+	        					</div>
+	        				</div>
+	        			</div>
+	        		</div>
+	        	</div>
+	        </div>
+	        <div class="swiper-slide">
+				<div class="am-bg">
+					<div class="am-top"></div>
+					<div class="am-bottom"></div>
+				</div>
+				<div class="am-content">
+					<div class="am-white">
+						<div class="white">
+							<div class="white-top">
+								<div class="top-content clearfix">
+									<div class="can">
+										<div class="can-up clearfix">
+											<i class="can-i ione"></i>
+											<p class="can-title">付款，是件容易的事</p>
+										</div>
+										<div class="can-bot">
+											<span>
+												<a href="">付款方式 | </a><a href="">134 家金融机构</a>
+											</span>
+										</div>
+									</div>
+									<div class="can">
+										<div class="can-up clearfix">
+											<i class="can-i itwo"></i>
+											<p class="can-title">会员保障，安心付款</p>
+										</div>
+										<div class="can-bot">
+											<span>
+												<a href="">安全升级 | </a>
+												<a href="">应急服务 | </a>
+												<a href="">理赔服务</a>
+											</span>
+										</div>
+									</div>
+									<div class="can">
+										<div class="can-up clearfix">
+											<i class="can-i ithree"></i>
+											<p class="can-title">海外商品、想购就购</p>
+										</div>
+										<div class="can-bot">
+											<span>
+												<a href="">全球直购 | </a><a href="">海外直邮</a>
+											</span>
+										</div>
+									</div>
+									<div class="can">
+										<div class="can-up clearfix">
+											<i class="can-i ifour"></i>
+											<p class="can-title">玩转支付宝</p>
+										</div>
+										<div class="can-bot">
+											<span>
+												<a href="">如何购物 | </a>
+												<a href="">新手须知 | </a>
+												<a href="">我要开店</a>
+											</span>
+										</div>
+									</div>
+								</div>
+							<div class="white-bot clearfix">
+								<div class="block">
+									<div class="block-top clearfix">
+										<a class="first" href="javascript:;">支付宝收费规则</a>
+										<a href="javascript:;">支付宝服务协议</a>
+									</div>
+									<div class="block-con clearfix">
+										<a class="first" href="javascript:;">蚂蚁金服隐私权政策</a>
+										<a href="javascript:;">蚂蚁金服客户权益保障承诺书</a>
+									</div>
+									<div class="block-bot">
+										<span>公告</span>
+										<ul class="newlist">
+											<li><a href="javascript:;">变更支付宝服务协议的公告</a></li>
+											<li><a href="javascript:;">《关于防范和打击电信网络诈骗犯罪的通告》</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="block">
+									<div class="follow-us">
+										<span>支付宝官方微博 <a href="javascript:;">+关注</a></span>
+									</div>
+								</div>
+								<div class="block">
+									<div class="pay">
+										<p>下载支付宝</p>
+										<img src="images/saoma.jpg" alt="支付宝">
+									</div>
+								</div>
+								<div class="block">
+									<div class="pay-gy">
+										<div class="gy-text">
+											<h4>支付宝E公益</h4>
+											<p>帮助听力智障儿童，献爱心。</p>
+											<a href="javascript:;">立即查看</a>
+										</div>
+										<img src="images/bg6.jpg">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="am-black">
+						<div class="footer">
+							<div class="links clearfix">
+								<a href="javascript:;">诚征英才</a>
+								<a href="javascript:;">联系我们</a>
+								<a href="javascript:;">International Business</a>
+								<span>ICP证: 沪B2-20150087</span>
+							</div>
+							<div class="links">
+								<p class="clearfix">
+									<a href="javascript:;">蚂蚁金服集团</a>
+									<a href="javascript:;">支付宝</a>
+									<a href="javascript:;">余额宝</a>
+									<a href="javascript:;">招财宝</a>
+									<a href="javascript:;">芝麻信用</a>
+									<a href="javascript:;">蚂蚁微贷</a>
+									<a href="javascript:;">网商银行</a>
+									<a href="javascript:;">蚂蚁达客</a>
+								</p>
+							</div>
+							<div class="links clearfix">
+								<a href="javascript:;">阿里巴巴集团</a>
+								<a href="javascript:;">淘宝网</a>
+								<a href="javascript:;">天猫</a>
+								<a href="javascript:;">聚划算</a>
+								<a href="javascript:;">全球速卖通</a>
+								<a href="javascript:;">阿里巴巴国际交易市场</a>
+								<a href="javascript:;">1688</a>
+								<a href="javascript:;">阿里妈妈</a>
+								<a href="javascript:;">阿里旅行·去啊</a>
+								<a href="javascript:;">阿里云计算</a>
+								<a href="javascript:;">YunOS</a>
+								<a href="javascript:;">阿里通信</a>
+								<a href="javascript:;">万网</a>
+								<a href="javascript:;">高德</a>
+								<a href="javascript:;">优视</a>
+								<a href="javascript:;">友盟</a>
+								<a href="javascript:;">虾米</a>
+								<a href="javascript:;">天天动听</a>
+								<a href="javascript:;">来往</a>
+								<a href="javascript:;">钉钉</a>
+							</div>
+							<div class="link1">
+								<a class="pic1" href="javascript:;"></a>
+								<a class="pic2" href="javascript:;"></a>
+								<a class="pic3" href="javascript:;"></a>
+								<a class="pic4" href="javascript:;"></a>
+								<a class="pic5" href="javascript:;"></a>
+							</div>
+							<div class="Num">
+								<p>homeproxy-30-5032</p>
+							</div>
+						</div>
+					</div>
+				</div>
+	        </div>
+	    </div>
+	</div>
+	<div class="swiper-pagination"></div>
+	<!-- Content end -->
+	<a href="javascript:;" class="updown" style="z-index: 98;">&#8744;</a>
+</body>
+</html>

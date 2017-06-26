@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!-- <script src="jquery-1.8.3.js"></script> -->
+	<style>
+		body{margin: 0;background-color: pink;}
+		#can{
+			display: block;
+			margin: 100px auto;
+			background-color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<canvas id="can" width="600" height="500"></canvas>
+	
+	<script>
+		window.onload = function(){ //等待dom元素加载完毕
+			var oC = document.getElementById('can');
+			var oA = oC.getContext('2d');
+
+				oC.onmousedown = function(ev){
+					var ev = ev || window.event;
+					oA.moveTo(ev.clientX-oC.offsetLeft,ev.clientY-oC.offsltTop);
+				
+				document.onmousemove = function(ev){
+					var ev = ev || window.event;
+					oA.lineTo(ev.clientX-oC.offsetLeft,ev.clientY-oC.offsetTop);
+					oA.stroke();
+				}
+				document.onmouseup = function(){
+					document.onmousemove = null;
+					document.onmouseup = null;
+				}
+			}
+		}
+	</script>
+</body>
+</html>

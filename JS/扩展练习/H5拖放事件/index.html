@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body{margin: 0;}
+		#div1{
+			width: 200px;
+			height: 200px;
+			background-color: red;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+	</style>
+</head>
+<body>
+	<div id="div1" draggable="true"></div>
+	<script>
+		// mousedown mouseup mousemove 
+
+		// dragstart dragend drag (在拖动元素上执行) 首先要在此元素上设置draggable="true" 为可拖
+		// dragenter dragleave  dragover (在目标元素上执行)
+		// drop 放下 (在目标元素上执行)
+		var oDiv = document.getElementById('div1');
+
+		oDiv.ondragstart=function(ev){
+			var disX = ev.clientX - this.offsetLeft;
+			var disY = ev.clientY - this.offsetTop;
+			
+			oDiv.ondragend=function(ev){
+				oDiv.style.left = ev.clientX - disX + 'px';
+				oDiv.style.top = ev.clientY - disY + 'px';
+			}
+
+			oDiv.ondrag=function(ev){
+				document.ondragend = document.ondragstart  = null;
+			}
+		}
+
+	</script>
+</body>
+</html>

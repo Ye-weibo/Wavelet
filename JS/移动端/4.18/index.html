@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="js/all.js" ></script>
+	<script>
+			(function(){
+		var w = window.screen.width; //屏幕宽度
+		var targetW = 750;
+		var scale = w/targetW; //当前尺寸/目标尺寸  缩放比例
+		var meta = document.createElement("meta");
+		meta.name = "viewport";
+		meta.content = "user-scalable=no,initial-scale="+scale+",minimum-scale="+scale+",maximum-scale="+scale+""
+		document.head.appendChild(meta); //添加标签
+	})();
+	//获取html
+	var html = document.documentElement;
+	//设置html的字体大小 = 可视区的宽度 / 15
+	html.style.fontSize = html.clientWidth / 15 + 'px';
+	//阻止pc和浏览器默认行为。
+	document.addEventListener('touchstart',function(ev){
+		ev.preventDefault();
+	});
+	</script>
+<!-- 	<script>   
+	(function (doc, win) {
+        var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) return;
+                if(clientWidth>=750){
+                    docEl.style.fontSize = '100px';
+                }else{
+                    docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+                }
+            };
+
+		        if (!doc.addEventListener) return;
+		        win.addEventListener(resizeEvt, recalc, false);
+		        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+	</script>  -->
+</head>
+<body>
+	<!-- 登录界面 -->
+	<div id="wrap" class="wrap">
+	<header>登录</header>
+	<div class="icon"></div>
+		<div class="content">
+			<div class="user">
+				<i class="icon-phone"></i> <!-- 手机icon -->
+				<i class="icon-arrow"></i> <!-- 切换箭头icon -->
+				<input class="text" type="text" placeholder="请输入手机号"> <!-- placeholder:提示文字 -->
+			</div>
+			<div class="mima">
+				<i class="icon-lock"></i> <!-- 锁头icon -->
+				<i id="icon-display" class="icon-display"></i> <!-- 显示icon -->
+				<input id="password" class="password" type="password">
+			</div>
+			<div id="forget-password" class="footer">忘记密码?</div>
+		</div>
+		<div id="denglu" class="denglu">登录</div>
+		<div id="registered" class="zhuce">注册新用户</div>
+	</div>
+	
+	<!-- 注册界面 -->
+	<div id="wrap-one" class="wrap-one">
+	<header>注册</header>
+	<i id="return" class="return"></i> <!-- 返回至登录界面 -->
+		<div class="content-one">
+			<div class="user-one">
+				<i class="icon-phone"></i> <!-- 手机icon -->
+				<input class="text-one" type="text" placeholder="请输入您的手机号码"> <!-- placeholder:提示文字 -->
+			</div>
+			<div class="verification">	<!-- 验证 -->
+				<i class="icon-number"></i> <!-- 数字icon -->
+				<span>获取验证码</span>
+				<input class="text-one" type="text" placeholder="请输入短息验证码">
+			</div>
+			<div class="mima">
+				<i class="icon-lock"></i> <!-- 锁头icon -->
+				<i id="icon-display" class="icon-display"></i> <!-- 显示icon -->
+				<input id="password" class="password" type="password" placeholder="请输入您的密码">
+			</div>
+		</div>
+		<div class="footer">注册并登录</div>
+	</div>
+	
+	<!-- 找回密码界面 -->
+	<div id="wrap-two" class="wrap-two">
+	<header>找回密码</header>
+	<i id="return-one" class="return-one"></i> <!-- 返回至登录界面 -->
+		<div class="content-two">
+			<div class="user-two">
+				<i class="icon-phone"></i> <!-- 手机icon -->
+				<input class="text-two" type="text" placeholder="请输入您的手机号码"> <!-- placeholder:提示文字 -->
+			</div>
+			<div class="verification"> <!-- 验证 -->
+				<i class="icon-number"></i> <!-- 数字icon -->
+				<span>获取验证码</span>
+				<input class="text-two" type="text" placeholder="请输入短息验证码">
+			</div>
+			<div class="mima">
+				<i class="icon-lock"></i> <!-- 锁头icon -->
+				<input class="password" type="password" placeholder="请输入您的新密码">
+			</div>
+			<div class="again-password">
+				<i class="icon-lock"></i> <!-- 锁头icon -->
+				<input class="password" type="password" placeholder="请再次输入您的新密码">
+			</div>
+		</div>
+		<i class="prompt"></i> <!-- 注意提示 -->
+		<p>提示：如需要帮助,请拨打客服热线：<h4>400-0000-000</h4></p>
+		<div class="footer">找回并修改密码</div>
+	</div>
+	
+	<!-- 首页 -->
+	<div id="wrap-three" class="wrap-three">
+		<div class="title"> <!-- 顶部轮播图 -->
+			<ul class="list">
+				<li><img src="img/bg-one.png" alt="" /></li>
+				<li><img src="img/bg-two.png" alt="" /></li>
+				<li><img src="img/bg-three.png" alt="" /></li>
+				<li><img src="img/bg-four.png" alt="" /></li>
+			</ul>
+			<div class="title-span">
+				<a href="javascript:;" class="list-style">●</a>
+				<a href="javascript:;">●</a>
+				<a href="javascript:;">●</a>
+				<a href="javascript:;">●</a>
+			</div>
+		</div>
+		<div class="navigation"> <!-- 旅游分类 -->
+			<div>
+				<div class="round"><img src="img/one.png"></div>
+				<p>出境游</p>
+			</div>
+			<div>
+				<div class="round"><img src="img/two.png"></div>
+				<p>港澳游</p>
+			</div>
+			<div>
+				<div class="round"><img src="img/three.png"></div>
+				<p>国内游</p>
+			</div>
+			<div>
+				<div class="round"><img src="img/four.png"></div>
+				<p>周边游</p>
+			</div>
+		</div> 
+		<div class="focus"> <!-- 今日热点 -->
+			<span class="src"></span>
+			<img class="laba" src="img/laba.png">
+			<span class="font">出境跟团游,满1000送100</span>
+		</div>
+		<div class="center"></div>
+		<div class="content-three"> <!-- 推荐内容 --></div>
+		<div class="lable"></div> <!-- 底部标签栏 -->
+	</div>
+</body>
+</html>

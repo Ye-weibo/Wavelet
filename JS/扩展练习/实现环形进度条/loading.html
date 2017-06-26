@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery-1.8.3.js"></script>
+	<style>
+		/*clip: rect(top, right, bottom, left);
+		这个属性规定了一个裁切的矩形,其中top和bottom所指定的偏移量是从元素盒子顶部边缘算起,right和left所指定的偏移量是从元素盒子左侧边缘算起（这里需要重点注意的是bottom和right的计算方式）*/
+		
+		/*需要注意的是：clip属性只能在元素设置了“position:absolute”或者“position:fixed”属性时起作用。
+		clip无法在设置“position:relative”和“position:static”上工作。*/
+
+	.circle {
+	    position: absolute;
+	    height: 200px;
+	    width: 200px;
+	    border-radius: 50%;
+	    background: red;
+	}
+	.pie-right, .pie-left { 
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    height: 200px;
+	    width: 200px;
+	    border-radius: 50%;
+	}
+	.right, .left {
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    height: 200px;
+	    width: 200px;
+	    border-radius: 50%;
+	    background: blue;
+	}
+	.pie-right, .right {
+	    clip: rect(0, auto, auto, 100px);
+	}
+	.pie-left, .left {
+	    clip: rect(0, 100px, auto, 0);
+	}
+	.mask {
+	    position: absolute;
+	    top: 25px;
+	    left: 25px;
+	    height: 150px;
+	    width: 150px;
+	    background: #fff;
+	    border-radius: 50%;
+	    text-align: center;
+	}
+
+	</style>
+</head>
+<body>
+	<div class="circle">
+	    	<div class="pie-right">
+	        	<div class="right"></div>
+	    	</div>
+		    <div class="pie-left">
+		        <div class="left"></div>
+		    </div>
+	    <div class="mask"><span>0</span>%</div>
+	</div>
+	<script>
+		function changeProcess(value) {
+			$('.mask span').html(value);
+	    	var num = value * 3.6;
+	    	if(num < 180) {
+	        $('.right').css('transform', 'rotate(' + num + 'deg)');
+	    	} else {
+	        $('.right').css('transform', 'rotate(180deg)');
+	        $('.left').css('transform', 'rotate(' + (num-180) + 'deg)');
+	    	}
+		}
+		changeProcess();
+		var dt=setInterval("change()",100);
+		var i = '';
+
+		function change(){
+			if (i<100) {
+				changeProcess(i++);
+			}else if (i=100) {
+				changeProcess(i);
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+﻿*{
+    padding:0px;
+    margin:0px;
+    font-family:"微软雅黑";
+}
+ul{
+    list-style-type:none;
+}
+#header{
+    width:90%;
+    height:30px;
+    margin:0 auto;
+   margin-top:10px;
+}
+#pro{
+    background-color:blue;
+    width:80px;
+    height:30px;
+    text-align:center;
+    line-height:30px;
+}
+#pro a{
+    color:#ffffff;
+    text-decoration:none;
+}
+#pro,.u1{
+    float:right;
+    margin-left:20px;
+}
+.u1 li{
+    float:left;
+    margin-left:20px;
+    font-size:14px;
+    margin-top:5px;
+}
+.u1 a{
+    color:#000000;
+}
+#oCenter{
+    width:640px;
+    height:300px;
+    clear:both;
+    margin:0 auto;
+}
+.pic img{
+    width:270px;
+}
+.pic{
+    width:270px;
+    height:129px;
+    margin:0 auto;
+    margin-bottom:20px;
+}
+#txtform div{
+    float:left;
+}
+#txt{
+    width:500px;
+    height:30px;
+}
+#oHred a{
+    color:#ffffff;
+    text-decoration:none;
+    background-color:blue;
+    display:block;
+    width:100px;
+    height:35px;
+    text-align:center;
+    line-height:35px;
+}
+.cam{
+    width:18px;
+    height:18px;
+    background-image:url(../img/camera_new_5606e8f.png);
+    margin-left:-30px;
+    margin-top:8px;
+}
+.cam:hover{
+    background-position:0px -20px;
+}
+#loginbox{
+     display:none; 
+}
+.ditem{
+    margin-top:20px;
+    margin-left:20px;
+
+}
+.ditem input{
+    width:300px;
+    height:30px;
+}
+.ditem a{
+    color:#ffffff;
+    text-decoration:none;
+    background-color:blue;
+    display:block;
+    width:305px;
+    height:40px;
+    text-align:center;
+    line-height:40px;
+}

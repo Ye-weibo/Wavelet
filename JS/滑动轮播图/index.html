@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>滑动轮播图</title>
+<link href="style/bxkElecPage.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+<div class="bxkFocusArea">
+    <div class="playFocus" id="playFocus">
+        <div class="tipFocus prevFocus" data-src="">
+            <div class="focusBack"></div>
+        </div>
+        <div class="sliderFocus">
+            <span class="imgLoading">加载中</span>
+            <div class="playBtn prevBtn"><div class="btnBack"></div><span class="btnIcon"></span></div>
+        <ul class="playList">
+            <li><a href="#" target="_blank"><img src="image/i17.jpg" width="1200" height="500"></a></li>
+            <li><a href="#" target="_blank"><img data-src="http://imgrt.pconline.com.cn/images/upload/upc/tx/wallpaper/1308/17/c5/spcgroup/24564093_1376703979992_1920x1200.jpg" width="1200" height="500"></a></li>
+            <li><a href="#" target="_blank"><img data-src="http://imgrt.pconline.com.cn/images/upload/upc/tx/wallpaper/1308/17/c5/spcgroup/24564093_1376703980000_1920x1200.jpg" width="1200" height="500"></a></li>
+            <li><a href="#" target="_blank"><img data-src="http://imgrt.pconline.com.cn/images/upload/upc/tx/wallpaper/1308/17/c6/spcgroup/24564337_1376704490374_1920x1200.jpg" width="1200" height="500"></a></li>
+            <li><a href="#" target="_blank"><img data-src="http://imgrt.pconline.com.cn/images/upload/upc/tx/wallpaper/1308/17/c6/spcgroup/24564337_1376704490373_1920x1200.jpg" width="1200" height="500"></a></li>
+            <li><a href="#" target="_blank"><img data-src="http://imgrt.pconline.com.cn/images/upload/upc/tx/wallpaper/1308/17/c6/spcgroup/24564337_1376704490370_1920x1200.jpg" width="1200" height="500"></a></li>
+        </ul>
+            <div class="playBtn nextBtn"><div class="btnBack"></div><span class="btnIcon"></span></div>
+            <div class="navBack"></div>
+            <ul class="playNav">
+                <li class="active defaultCur">
+                    <div class="focusText"><span class="text">千山暮雪</span></div>
+                    <div class="focusImage"><img src="image/i17.jpg" width="190" height="80"></div>
+                </li>
+                <li>
+                    <div class="focusText"><span class="text">年年岁岁</span></div>
+                    <div class="focusImage"><img src="http://imgrt.pconline.com.cn/images/upload/upc/tx/wallpaper/1308/17/c5/spcgroup/24564093_1376703979992_1920x1200.jpg" width="190" height="80"></div>
+                </li>
+                <li>
+                    <div class="focusText"><span class="text">雪欺芳华</span></div>
+                    <div class="focusImage"><img src="http://imgrt.pconline.com.cn/images/upload/upc/tx/wallpaper/1308/17/c5/spcgroup/24564093_1376703980000_1920x1200.jpg" width="190" height="80"></div>
+                </li>
+                <li>
+                    <div class="focusText"><span class="text">那年夏天</span></div>
+                    <div class="focusImage"><img src="http://imgrt.pconline.com.cn/images/upload/upc/tx/wallpaper/1308/17/c6/spcgroup/24564337_1376704490374_1920x1200.jpg" width="190" height="80"></div>
+                </li>
+                <li>
+                    <div class="focusText"><span class="text">梦里落花</span></div>
+                    <div class="focusImage"><img src="http://imgrt.pconline.com.cn/images/upload/upc/tx/wallpaper/1308/17/c6/spcgroup/24564337_1376704490373_1920x1200.jpg" width="190" height="80"></div>
+                </li>
+                <li class="last">
+                    <div class="focusText"><span class="text">蝶戏风尘</span></div>
+                    <div class="focusImage"><img src="http://imgrt.pconline.com.cn/images/upload/upc/tx/wallpaper/1308/17/c6/spcgroup/24564337_1376704490370_1920x1200.jpg" width="190" height="80"></div>
+                </li>
+            </ul>
+        </div>
+        <div class="tipFocus nextFocus" data-src="">
+            <div class="focusBack"></div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="script/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="script/bxkElecPage.js"></script>
+<script type="text/javascript">
+$(function(){
+    playFocus.initFunc("#playFocus");
+})
+</script>
+</body>
+</html>

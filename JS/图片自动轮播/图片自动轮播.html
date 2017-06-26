@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>图片自动轮播</title>
+	<script src="jquery-1.11.0.min.js"></script>
+	<style>
+		div{width: 500px;height: 300px;overflow: hidden;margin: 0 auto;}
+		ul{width: 1500px;height: 300px;padding: 0;margin: 0;}
+		img{width: 500px;height: 300px;position: relative;left: 0;}
+		li{width: 500px;height: 300px;list-style: none;float: left;}
+	</style>
+</head>
+<body>
+	<div>
+		<ul>
+			<li><img class="img" src="./img/one.jpg"></li>
+			<li><img class="img" src="./img/two.jpg"></li>
+			<li><img class="img" src="./img/three.jpg"></li>
+		</ul>
+	</div>
+	<script>
+			var Arr = [$('.img1'),$('.img2'),$('.img3')];
+			var dt = setInterval('cle()',20);
+			var len = 10;
+			
+			function cle(){
+				for (var i = 0; i < Arr.length; i++) {
+					Arr[i].each(function(){
+						if (len<=1000) {
+							Arr[i].css({left:-len ++})
+						}else if (len=1000) {
+							return false;
+						}
+					})
+				}
+			}
+	</script>
+</body>
+</html>

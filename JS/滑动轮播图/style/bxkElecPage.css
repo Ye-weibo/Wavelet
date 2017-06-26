@@ -1,0 +1,49 @@
+@charset "utf-8";
+/* CSS Document */
+/*公共样式*/
+html, body {color: #333; background:#ffffff;font:400 12px/1.5 Arial,SimSun,Tahoma,Helvetica,sans-serif;font-family:"Microsoft YaHei"; overflow-x: hidden;}
+body, div, h1, h2, h3, h4, h5, h6, ul, ol, li, form, fieldset, input, p, tr,blockquote, td, th, textarea, dl, dt, dd, menu {margin: 0;padding: 0;}
+a {text-decoration: none;color: #333;cursor: pointer;outline: 0;}
+a:hover {color: #333;text-decoration: underline;}
+fieldset, img {border:none;}
+img, input {vertical-align: middle;}
+ol, ul, li {list-style: none;}
+table, table td, table th {border-collapse: collapse;border-spacing: 0;}
+address, caption, em, strong, th, i {font-style: normal;font-weight:normal;}
+.clear {clear: both;font-size: 0;height: 0;line-height: 0;overflow: hidden;}
+textarea {resize: none;}
+:focus {outline: medium none;}
+.clearfix:after {content: ".";display: block;height: 0;clear: both;visibility: hidden;}
+*html .clearfix { height: 1%;}
+
+
+/*基础样式*/
+.column{ width:1200px; margin:auto;}
+
+
+.playFocus{ width: 1200px; height: 500px; position: relative; margin: auto;}
+.playFocus .playBtn{ position: absolute; width: 57px; height: 57px;  top: 221px; z-index: 999; cursor: pointer;}
+.playFocus .playBtn .btnBack{ position: absolute; width: 100%; height:100%; left: 0px; top: 0px; background: #fff;filter:alpha(opacity=30);opacity: 0.3;}
+.playFocus .playActive .btnBack{filter:alpha(opacity=50);opacity: 0.5;}
+.playFocus .playBtn .btnIcon{ width: 13px; height: 26px; position: absolute; left: 22px; top: 15px;}
+.playFocus .prevBtn{left: -57px;}
+.playFocus .nextBtn{right: -57px;}
+.playFocus .prevBtn .btnIcon{ background: url(../image/icon09.png) no-repeat;}
+.playFocus .nextBtn .btnIcon{ background: url(../image/icon10.png) no-repeat;}
+
+.playFocus .tipFocus{ width: 360px; height: 500px; overflow: hidden; position: absolute; top: 0px;}
+.playFocus .tipFocus .focusBack{ position: absolute; width: 100%; height: 100%; background: #000; left: 0; top: 0;filter:alpha(opacity=50);opacity: 0.5;}
+.playFocus .prevFocus{ left: -360px; text-align: right;}
+.playFocus .nextFocus{ right: -360px; text-align: left;}
+.playFocus .sliderFocus{ width: 1200px: height : 500px; overflow: hidden; position: relative;}
+.playFocus .sliderFocus .playList{ position: relative;height : 500px; overflow: hidden;}
+.playFocus .sliderFocus .playList li{ position: absolute; top: 0px;left:0px;}
+.playFocus .sliderFocus .imgLoading{ position: absolute; width: 50px; height: 50px; background: #000; left: 575px; top:225px; z-index: 5; text-align: center; color: #fff; line-height: 50px; display: none;}
+.playFocus .playNav{ height:80px;position: absolute;left: 5px; bottom: -85px;z-index: 6; overflow: hidden;}
+.playFocus .playNav li{float: left; margin: 0 10px 0 0; width: 190px; height: 80px; position: relative;top:0px; overflow: hidden; cursor: pointer;filter:}
+.playFocus .playNav li.last{ margin: 0;}
+.playFocus .playNav li .focusText{ width: 190px; height: 80px; position: absolute; left: 0px; bottom: -80px; background: #27c8fa; color: #fff; text-align: center; font-size: 16px; line-height: 20px;z-index: 2;}
+.playFocus .playNav li .focusText .text{ position: absolute; width: 96px;overflow: hidden; max-height:20px; top: 19px; left: 47px;}
+.playFocus .playNav li .focusImage{ vertical-align: top; position: relative;}
+.playFocus .playNav li.active .focusText{}
+.playFocus .sliderFocus .navBack{ width: 100%; height: 0px; position:absolute; left: 0; bottom: -90px;filter:alpha(opacity=50);opacity: 0.5; background: #000; font-size: 0; line-height: 0; overflow: hidden;z-index: 5;}

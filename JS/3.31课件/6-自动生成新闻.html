@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<!-- 1、处理按钮
+	2、 -->
+</head>
+<body>
+	<input type="button"  value="自动生成几条新闻">
+
+	<ul>
+		
+	</ul>
+
+	<script>
+	var aNew = 
+	[
+		'《新闻制高点》采访派派猪理财 “合规+创新”助力互金行业发展',
+		'坚守新闻理想 牢记职责使命 - ::紫光阁::中共中央国家机关工作...',
+		'新闻分析:阿盟峰会传达出什么信号',
+		'以品质思维传递价值 ZAKER荣获“鼎媒奖”最佳新闻客户端',
+		' 新闻照片受著作权保护',
+	];
+	var oInput = document.getElementsByTagName('input')[0];
+	var oUl = document.getElementsByTagName('ul')[0];
+	var onOff = true;
+
+	oInput.onclick = function(){
+		// this.disabled = 'disabled';
+		// 
+		if (onOff) {
+			for (var i = 0; i < 5; i++) {
+				oUl.innerHTML += '<li>'+ aNew[i]+'</li>'
+			}
+		}
+		onOff = false;
+		
+	}
+
+	</script>
+
+
+</body>
+</html>

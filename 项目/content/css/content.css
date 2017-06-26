@@ -1,0 +1,118 @@
+#oll_body{border: 0;margin: 0;font:13px/1.5 \5FAE\8F6F\96C5\9ED1,simsun,sans-serif;}
+.content_box div{display: block;}
+#oll_body a{text-decoration: none;display: block;}
+.else{margin-top: 7px;}
+.else,.else1{color: gray;margin-right: 0;}
+.content_box a:hover{color: #009af3;}
+.all_photo,.width700px,.singer_name, ul{padding: 0;}
+img{border: 0;}
+.content_box span,button{cursor: pointer;}
+.Num span{cursor: none;}
+.web{height: 100%;}
+.song_name,.program{width: 295px;height: 19px;color: #fff;font-size: 14px;}
+.singer,.character{color: #cfcfcf;}
+.lb_midbox,.mid_font,.mid_name,dd{white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+.web,.margin_0,.family,.person,.person_name,.lb_content,.number,.song_name,.mid_name,.singer,.right_box dl,.right_box dd,p,.footer_link{margin: 0;}
+.block_one_left,.lb_bigbox,.block_three_left,.rb_small,.block_five_left,.radio_station,.top_photo,.bottom_photo,.family,.seven_box,.footer_link{float: left;}
+.block_one_right,a,.lb_midbox,.video,.block_three_right,.block_five_right,.lb_content{float: right;}
+.content_box{margin: 0 auto;width: 1000px;height: 2124px;position: relative;overflow: hidden;}
+.block_one{width: 1000px;height: 390px;margin-top: 40px;background-color: #fff;}
+.block_one_left{width: 650px;height: 390px;background-color: #fff;}
+.block_one_lt{width: 650px;height: 30px;padding-bottom: 30px;background: url(img/one.jpg) no-repeat;}
+.block_one_lb{width: 660px;height: 330px;}
+.lb_bigbox{width: 325px;height: 325px;margin-right: 5px;position: relative;}
+.bg_img{width: 100%;height: 100%;}
+.lb_content{width: 150px;height: 30px;padding-right: 8px;background: url(img/bg1.png) no-repeat;position: absolute;top: 0;right: 0;text-align: right;}
+.music,.number{color: #fff;}
+.music:hover,.number:hover{color: #fff;}
+.music{width: 14px;height: 14px;margin-right: 10px;font-size: 18px;position: relative;top: 2px;}
+.lb_foot{width: 309px;height: 38px;padding: 6px 8px;position: absolute;bottom: 0;background: rgba(0,0,0,.5);}
+.lb_bigbox{cursor: pointer;}
+.lb_midbox{width: 160px;height: 160px;margin: 0 5px 5px 0;position: relative;}
+.bg1_img{width: 160px;height: 160px;}
+.mid_foot{width: 144px;height: 38px;padding: 6px 8px;position: absolute;bottom: 0;background: rgba(0,0,0,.5);}
+.mid_name{width: 100px;height: 19px;color: #fff;font-size: 14px;}
+.block_one_right{width: 320px;height: 385px;background-color: #fff;}
+.block_one_rt{width: 320px;height: 30px;padding-bottom: 30px;background: url(img/two.jpg) no-repeat;}
+.block_one_rb{width: 320px;height: 325px;}
+.rb_box{width: 320px;height: 98px;margin-bottom: 15px;position: relative;background-color: #f6f6f6;}
+.left_box{width: 98px;height: 98px;position: absolute;top: 0;left: 0;}
+.arrow{position: absolute;top: 50%;margin-top: -13px;left: 295px;font-size: 20px;color: #acacac;margin-right: 0;}
+.right_box{width: 200px;height: 68px;padding: 15px 10px;position: absolute;top: 0;right: 0;}
+.right_box dl{width: 200px;height: 72px;}
+.right_box dt{line-height: 24px;color: #333;font-weight: 700;}
+.right_box dd{width: 180px;height: 24px;line-height: 24px;font-size: 14px;color: #555;}
+.block_two{width: 1000px;height: 80px;margin-top: 10px;background: url(img/guanggao1.jpg) no-repeat;cursor: pointer;}
+.block_three{width: 1000px;height: 375px;margin-top: 40px;}
+.block_three_left{width: 650px;height: 375px;}
+.block_three_lt{width: 650px;height: 30px;padding-bottom: 20px;border-bottom: 1px solid #f0f0f0;margin-bottom: 10px;
+				background: url(img/three.jpg) no-repeat;}
+.block_three_font{width: 185px;height: 31px;line-height: 31px;position: absolute;left: 145px;}
+.mr_span{margin-right: 20px;}
+#oll_body span:hover{color: #009af3;}
+.span_margin{margin-right: 0;}
+.video{width: 89px;height: 29px;border: 1px solid #dbdbdb;border-radius: 2px;background: 0 0;position: relative;}
+.video em{position: absolute;font-style: normal;color: #555;}
+.em_one{top: 1px;left: 8px;font-size: 20px;color: #999999;}
+.em_two{top: 6px;left: 28px;color: #555;}
+.video:hover{border-color: #009af3;}
+.video:hover em{color: #009af3;}
+.block_three_lb{width: 650px;height: 290px;overflow: hidden;position: relative;}
+.block_three_lb li{width: 630px;height: 35px;list-style: none;}
+.Name,.Time{color: #333;}
+.Name{position: absolute;left: 10px;}
+.Time{position: absolute;right: -1px;}
+.block_three_foot{width: 650px;height: 20px;position: relative;}
+.Num{text-align: center;}
+.Number{font-size: 13px;color: #8d8d8d;margin: 0;}
+.Number:hover{color: #8d8d8d;cursor: none;}
+.left_arrow{position: absolute;top: -2px;left: 290px;font-size: 15px;color: #9d9d9d;}
+.right_arrow{position: absolute;top: -2px;left: 345px;font-size: 15px;color: #9d9d9d;}
+.left_arrow:hover,.right_arrow:hover{color: #777777;}
+.block_three_right{width: 320px;height: 362px;}
+.block_three_rt{width: 320px;height: 30px;padding-bottom: 20px;background: url(img/four.jpg) no-repeat;}
+.block_three_rb{width: 332px;height: 312px;}
+.rb_bigbox{width: 320px;height: 175px;margin-bottom: 12px;background-color: #fff;position: relative;}
+.rb_bigbox_foot{width: 304px;height: 38px;padding: 6px 8px;font-size: 14px;position: absolute;bottom: 0;background: url(img/bg.png) no-repeat left bottom;}
+.rb_small{width: 154px;height: 125px;margin-right: 12px;position: relative;}
+.rb_smallbox_foot{background: 0 0;position: absolute;}
+.program_black{color: black;}
+.program_black:hover{color: #009af3;}
+.block_four{width: 1000px;height: 100px;margin-top: 40px;background: url(img/guanggao2.jpg);cursor: pointer;}
+.block_five{width: 1000px;height: 355px;margin-top: 40px;}
+.block_five_left{width: 650px;height: 370px;}
+.block_five_lt{width: 650px;height: 30px;padding-bottom: 30px;background: url(img/five.jpg) no-repeat;}
+.block_five_lb{width: 650px;height: 310px;}
+.width700px{width: 700px;height: 0;margin: 0;}
+.radio_station{width: 100px;height: 130px;margin: 0 37px 25px 0;list-style: none;}
+.radio_logo{margin-bottom: 10px;}
+.radio_find{text-align: center;color: #333;}
+.radio_find:hover{color: #009af3;}
+.block_five_right{width: 320px;height: 380px;}
+.block_five_rt{width: 350px;height: 30px;padding-bottom: 30px;background: url(img/six.jpg) no-repeat;}
+.block_five_font{width: 210px;height: 31px;line-height: 33px;position: relative;left: 145px;}
+.else1{position: relative;top: 0px;right: 35px;}
+.block_five_rb{width: 330px;height: 320px;overflow: hidden;}
+.block_five_rb1{width: 330px;height: 320px;}
+.all_photo{margin: 0;width: 330px;height: 270px;position: relative;}
+.top_photo{width: 160px;height: 160px;margin: 0 5px 5px 0;position: relative;}
+.bottom_photo{width: 105px;height: 105px;margin-right: 5px;}
+.five_img,.five_img1{width: 100%;height: 100%;}
+.person{width: 100%;height: 38px;padding: 6px 8px;font-size: 14px;position: absolute;bottom: 0;background: url(img/bg.png) no-repeat left bottom;}
+.person_name{height: 50px;line-height: 50px;color: #fff;}
+.block_five_foot{width: 330px;height: 6px;padding-top: 17px;position: absolute;}
+.foot_arrow{float: left;margin: 0 5px;color: #ccc;position: relative;left: 140px;}
+.block_six{width: 1000px;height: 100px;margin-top: 40px;background: url(img/guanggao3.jpg);cursor: pointer;}
+.block_seven{width: 1000px;height: 276px;margin-top: 40px;}
+.block_seven_top{width: 100%;height: 30px;padding-bottom: 30px;background: url(img/seven.jpg) no-repeat;}
+.block_seven_content{width: 100%;height: 216px;}
+.seven_content{width: 1010px;height: 216px;}
+.seven_box{width: 130px;height: 58px;border: 1px dashed #ccc;margin: 0 12px 12px 0;}
+.block_eight{width: 1000px;height: 168px;margin-top: 30px;}
+.block_eight_top{width: 100%;height: 30px;padding-bottom: 30px;background: url(img/eight.jpg) no-repeat;}
+.block_eight_content{width: 100%;height: 88px;padding-bottom: 20px;}
+.footer_link{width: 125px;height: 24px;margin-bottom: 20px;color: #555;}
+.retop{margin: 0;width: 50px;height: 50px;position: fixed;top: 560px;left: 76.5%;background: 0 0;}
+.retop:hover{background: gray;border-radius: 5px;}
+#cover{width: 160px;height: 160px;background: rgba(0,0,0,0.3);position: absolute;top: 0;visibility: hidden;}
+#cover1{width: 105px;height: 105px;background: rgba(0,0,0,0.3);position: absolute;bottom: 0;}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#chatblock{position: relative;width: 500px;height: 700px;border: 2px solid black;border-radius: 12px;}
+		#content{width: 500px;height: 600px;border-radius: 12px;background-color: rgba(0,0,0,0.1);overflow: auto;}
+		/*#contnet:hover{overflow-y: scroll;}*/
+		#footer{position: absolute;bottom: 0;width: 500px;height: 100px;background-color: rgba(0,0,0,0.2);}
+		#icon,#img,#chatbox,#send{position: absolute;}
+		#img,#icon{width: 40px;height: 40px;top: 30px;left: 50px;}
+		#img{top: 0;left: 0;cursor: pointer;}
+		#chatbox{width: 250px;height: 20px;top: 40px;left: 100px;border: 0;outline: none;}
+		#send{top: 42px;left: 360px;cursor: pointer;}
+		.man,.women{width: 30px;height: 30px;}
+		.man,.right_content{float: right;}
+		.women.left_content{float: left;}
+		.right_content{
+			display: inline-block;
+			padding: 5px 8px;
+			font-family: 微软雅黑;
+			font-size: 16px;
+			border-radius: 3 px;
+			background-color: #2EDB23;
+			border-radius: 10px;
+		}
+		.left_content{
+			display: inline-block;
+			padding: 5px 8px;
+			font-family: 微软雅黑;
+			font-size: 16px;
+			border-radius: 3 px;
+			background-color: orange;
+			border-radius: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div id="chatblock">
+		<div id="content"></div>
+			<div id="footer">
+				<div id="icon"><img id="img" src="man.png"></div>
+					<input type="text" id="chatbox">
+					<input type="button" id="send" value="发送">
+			</div>
+		</div>
+	<script>
+		window.onload = function () {
+			var oInput = document.getElementById('chatbox');
+			var oButton = document.getElementById('send');
+			var oText = document.getElementById('content');
+			var oImg_box = document.getElementById('icon');
+			var oImg = document.getElementById('img');
+			var Onoff = true;
+
+			oImg_box.onclick = function () {
+				if (Onoff) {
+					oImg.src='women.png';
+					Onoff = false;
+				}else{
+					oImg.src='man.png';
+					Onoff = true;
+				}
+			}
+			oButton.onclick = function  () {
+				if (oInput.value=='') {
+					alert('请输入内容')
+				}else{
+					if (Onoff) {
+						oText.innerHTML= '<br />' + '<img class="man" src="man.png">' + 
+						'<div class = "right_content">'+oInput.value+' </div>'+'<br />'+oText.innerHTML;
+						oInput.value = '';
+					}else{
+						oText.innerHTML= '<br />' + '<img class="women" src="women.png">' + 
+						'<div class = "left_content">'+oInput.value+' </div>'+'<br />'+oText.innerHTML;
+						oInput.value = '';
+					}
+				}
+			}
+		}
+	</script>
+</body>
+</html>

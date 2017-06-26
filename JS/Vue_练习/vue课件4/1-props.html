@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="vue.js"></script>
+</head>
+<body>
+	<div id="app">
+
+		<div>我是根实例里的DIV</div>
+		<showhtml :show="abc" @getf="seebady"></showhtml>
+	</div>
+	
+
+	<script>
+		//子组件 $emit
+		Vue.component("showhtml",{
+			methods : {
+				showf(){
+					this.$emit("getf");
+					this.num++;
+				}
+				
+			},
+			props : {
+				show : {
+					// type: [String,Number],
+					// default : 10,
+					// required:false,
+					validator:function (value){
+							console.log(value);	
+
+							// return value > 10
+					}
+				}
+			},
+			data(){
+				return {
+					num : 0
+				}
+			},
+			template : `
+				<div>
+					<h1>{{show}}</h1>
+					<button @click="showf">click</button>
+					<span>{{num}}</span>
+				</div>
+			`
+		})
+
+		new Vue({
+			el: "#app",
+			data : {
+				abc : '0'
+			},
+			methods : {
+				seebady(){
+					// alert("子组件点击了")
+					this.abc++
+				}
+			}
+		})
+	</script>
+	
+</body>
+</html>

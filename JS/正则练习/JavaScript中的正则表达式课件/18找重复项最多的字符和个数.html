@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script>
+
+var str = 'assssjdssskssalsssssdkjsssdss';
+
+var arr = str.split('');
+// alert(typeof arr.sort().join(''))
+
+str = arr.sort().join('');
+
+// str = 'aadddjjkklsssssssssssssssssss'
+
+// alert(str);
+
+var value = '';
+var index = 0;
+
+var re = /(\w)\1+/g;  //  /aa/g
+
+str.replace(re,function($0,$1){
+	
+	 alert($0);
+	// alert($1);
+	
+	if(index<$0.length){
+		index = $0.length;
+		value = $1;
+	}
+	
+});
+
+ alert('最多的字符:'+value+',重复的次数:'+index);
+
+</script>
+</head>
+
+<body>
+</body>
+</html>

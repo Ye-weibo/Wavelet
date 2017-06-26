@@ -1,0 +1,84 @@
+body,p{margin: 0;}
+.wrap,.wrap-one,.wrap-two{width: 15rem;height: 25.84rem;background: url(../img/wrap.png) no-repeat;margin: 0 auto;position: absolute;}
+/* 登录界面 */
+/*.wrap{display: none;}*/
+.wrap header{position: absolute;top: 0.5rem;left: 6.76rem;font-size: 0.72rem;font-weight: bold;color: #fff;}
+.content input{border: 0;padding: 0;font-size: 0.56rem;font-family: "微软雅黑";color: #333;outline: none;}
+.wrap .icon{width: 3.2rem;height: 3.2rem;border-radius: 50%;position: absolute;top: 2.72rem;left: 5.9rem;background: url(../img/user.png) no-repeat;}
+.wrap .content{width: 13.76rem;height: 3.94rem;border-radius: 0.16rem;border: 0.02rem solid #c8c7cc;background-color: #fff;position: relative;top: 6.98rem;left: 0.6rem;}
+.content .user{width: 100%;height: 1.96rem;border-top-left-radius: 0.16rem;border-top-right-radius: 0.16rem;border-bottom: 0.02rem solid #c8c7cc;position: relative;}
+.content .mima{width: 100%;height: 1.98rem;border-bottom-right-radius: 0.16rem;border-bottom-left-radius: 0.16rem;position: relative;}
+.user .icon-phone{width: 0.56rem;height: 0.94rem;background: url(../img/phone.png) no-repeat;position: absolute;top: 0.54rem;left: 0.54rem;}
+.user .icon-arrow{width: 0.8rem;height: 0.4rem;background: url(../img/qiehuan.png) no-repeat;position: absolute;top: 0.8rem;right: 1.02rem;}
+.user .text{width: 9.72rem;height: 100%;position: absolute;left: 1.68rem;}
+.mima .password{width: 9.72rem;height: 1.96rem;position: absolute;left: 1.68rem;}
+.mima .icon-lock{width: 0.66rem;height: 0.78rem;background: url(../img/lock.png) no-repeat;position: absolute;top: 0.58rem;left: 0.48rem;}
+.mima .icon-display{width: 0.8rem;height: 0.52rem;background: url(../img/xianshi.png) no-repeat;position: absolute;top: 0.74rem;right: 1.02rem;}
+.content .footer{position: absolute;top: 4.36rem;right: 0;font-size: 0.48rem;letter-spacing: 0.04rem;font-family: "微软雅黑";color: #fff;}
+.wrap .denglu,.wrap .zhuce{border-radius: 0.16rem;font-size: 0.56rem;color: #fff;line-height: 1.6rem;text-align: center;font-family: "微软雅黑";}
+/*.wrap .denglu:hover,.wrap .zhuce:hover{background-color: #ff9a14;}*/
+.wrap .denglu{width: 13.76rem;height: 1.6rem;border: 0.04rem solid #ffffff;position: absolute;top: 12.8rem;left: 0.6rem;background: none;}
+.wrap .zhuce{width: 13.76rem;height: 1.6rem;border: 0.04rem solid #ffffff;position: absolute;top: 14.8rem;left: 0.6rem;}
+/* 注册界面 */
+.wrap-one{display: none;}
+.wrap-one header{position: absolute;top: 0.5rem;left: 6.76rem;font-size: 0.72rem;font-weight: bold;color: #fff;}
+.content-one input{border: 0;padding: 0;font-size: 0.56rem;font-family: "微软雅黑";color: #333;outline: none;}
+.wrap-one .return{width: 0.66rem;height: 0.66rem;position: absolute;top: 0.52rem;left: 0.4rem;background: url(../img/return.png) no-repeat;}
+.wrap-one .content-one{width: 13.76rem;height: 5.92rem;border-radius: 0.16rem;border: 0.02rem solid #c8c7cc;position: relative;top: 2.72rem;left: 0.6rem;background-color: #fff;}
+.content-one .user-one{position: relative;width: 100%;height: 1.96rem;border-top-left-radius: 0.16rem;border-top-right-radius: 0.16rem;border-bottom: 0.02rem solid #c8c7cc;}
+.content-one .verification{position: relative;width: 100%;height: 1.96rem;border-bottom: 0.02rem solid #c8c7cc;}
+.content-one .mima{position: relative;width: 100%;height: 1.98rem;border-bottom-right-radius: 0.16rem;border-bottom-left-radius: 0.16rem;}
+.user-one .icon-phone{width: 0.56rem;height: 0.94rem;background: url(../img/phone.png) no-repeat;position: absolute;top: 0.56rem;left: 0.54rem;}
+.user-one .text-one{width: 6.92rem;height: 100%;position: absolute;left: 1.56rem;}
+.verification .icon-number{width: 0.8rem;height: 0.62rem;background: url(../img/number.png) no-repeat;position: absolute;top: 0.68rem;left: 0.42rem;}
+.verification .text-one{width: 6.92rem;height: 1.96rem;position: absolute;left: 1.56rem;}
+.verification span{position: absolute;top: 0.66rem;right: 1.18rem;border-left: 0.02rem solid #c8c7cc;padding-left: 1.16rem;font-size: 0.56rem;font-family: "微软雅黑";color: #ff9a14;}
+.mima .text-one{width: 6.92rem;height: 1.96rem;position: absolute;left: 1.56rem;}
+.mima .icon-lock{width: 0.66rem;height: 0.78rem;background: url(../img/lock.png) no-repeat;position: absolute;top: 0.58rem;left: 0.48rem;}
+.mima .icon-display{width: 0.8rem;height: 0.52rem;background: url(../img/xianshi.png) no-repeat;position: absolute;top: 0.74rem;right: 1.02rem;}
+.wrap-one .footer{border-radius: 0.16rem;font-size: 0.56rem;color: #fff;line-height: 1.6rem;text-align: center;font-family: "微软雅黑";width: 13.76rem;height: 1.6rem;border: 0.04rem solid #ffffff;position: absolute;top: 9.68rem;left: 0.6rem;}
+.wrap-one .footer:hover{background-color: #ff9a14;}
+/* 找回密码界面 */
+.wrap-two{display: none;}
+.wrap-two header{position: absolute;top: 0.5rem;left: 6rem;font-size: 0.72rem;font-weight: bold;color: #fff;}
+.content-two input{border: 0;padding: 0;font-size: 0.56rem;font-family: "微软雅黑";color: #333;outline: none;}
+.wrap-two .return-one{width: 0.66rem;height: 0.66rem;position: absolute;top: 0.52rem;left: 0.4rem;background: url(../img/return.png) no-repeat;}
+.wrap-two .content-two{width: 13.76rem;height: 7.92rem;border-radius: 0.16rem;border: 0.02rem solid #c8c7cc;position: relative;top: 2.76rem;left: 0.6rem;background-color: #fff;}
+.content-two .user-two{position: relative;width: 100%;height: 1.96rem;border-top-left-radius: 0.16rem;border-top-right-radius: 0.16rem;border-bottom: 0.02rem solid #c8c7cc;}
+.content-two .verification{position: relative;width: 100%;height: 1.96rem;border-bottom: 0.02rem solid #c8c7cc;}
+.content-two .mima{position: relative;width: 100%;height: 1.96rem;border-bottom: 0.02rem solid #c8c7cc;}
+.content-two .again-password{position: relative;width: 100%;height: 1.98rem;border-bottom-right-radius: 0.16rem;border-bottom-left-radius: 0.16rem;}
+.user-two .icon-phone{width: 0.56rem;height: 0.94rem;background: url(../img/phone.png) no-repeat;position: absolute;top: 0.56rem;left: 0.54rem;}
+.user-two .text-two{width: 6.92rem;height: 100%;position: absolute;left: 1.56rem;}
+.verification .text-two{width: 6.92rem;height: 1.96rem;position: absolute;left: 1.56rem;}
+.verification .icon-number{width: 0.8rem;height: 0.62rem;background: url(../img/number.png) no-repeat;position: absolute;top: 0.68rem;left: 0.42rem;}
+.verification span{position: absolute;top: 0.66rem;right: 1.18rem;border-left: 0.02rem solid #c8c7cc;padding-left: 1.16rem;font-size: 0.56rem;font-family: "微软雅黑";color: #ff9a14;}
+.mima .password{width: 6.92rem;height: 1.96rem;position: absolute;left: 1.56rem;}
+.mima .icon-lock,.again-password .icon-lock{width: 0.66rem;height: 0.78rem;background: url(../img/lock.png) no-repeat;position: absolute;top: 0.58rem;left: 0.48rem;}
+.again-password .password{width: 6.92rem;height: 1.96rem;position: absolute;left: 1.56rem;}
+.wrap-two .prompt{position: absolute;top: 10.92rem;left: 0.6rem;width: 0.6rem;height: 0.6rem;background: url(../img/tishi.png) no-repeat;}
+.wrap-two p{position: absolute;top: 10.96rem;left: 1.4rem;font-size: 0.48rem;font-family: "微软雅黑";color: #fff;}
+.wrap-two h4{margin: 0;position: absolute;top: 11.02rem;left: 9.84rem;font-size: 0.48rem;font-family: "微软雅黑";color: #ff9a14;}
+.wrap-two .footer{position: absolute;top: 12.54rem;left: 0.6rem;width: 13.76rem;height: 1.6rem;border-radius: 0.16rem;font-size: 0.56rem;color: #fff;line-height: 1.6remtext-align: center;font-family: "微软雅黑";border: 0.04rem solid #ffffff;}
+.wrap-two .footer:hover{background-color: #ff9a14;}
+/* 首页 */
+.wrap-three{display: none;}
+.wrap-three{width: 15rem;height: 34.04rem;}
+.wrap-three .title{width: 15rem;height: 6.74rem;position: relative;border-bottom: 0.02rem solid #efeff4;}
+.title .list{width: 400%;padding: 0;margin: 0;position: absolute;top: 0;left: 0;list-style: none;}
+.title li{width: 15rem;float: left;}
+.title img{width: 15rem;height: 6.74rem;display: block;}
+.wrap-three .navigation{position: relative;left: 0.6rem;width: 13.8rem;height: 3.8rem;border-bottom: 0.02rem solid #c8c7cc;}
+.navigation div{position: relative;width: 2rem;height: 100%;display: inline-block;float: left;margin-right: 1.92rem;}
+.navigation div:after{content: '';}
+.navigation div:last-of-type{margin-right: 0;}
+.navigation .round{position: absolute;top: 0.4rem;left: 0;width: 2rem;height: 2rem;border-radius: 50%;background-color: #fff;}
+.navigation p{position: absolute;top: 2.7rem;left: 0.26rem;font-size: 0.48rem;font-family: "微软雅黑";font-weight: bold;letter-spacing: 0.06rem;color: #787a7b;}
+.title-span{width: 15rem;height: 0.36rem;position: relative;top: 5.8rem;left: 6.46rem;font-size: 0.44rem;z-index: 1;}
+.title-span a{text-decoration: none;display: inline-block;color: #c8b59f;vertical-align: top;}
+.title-span a.list-style{color: #ff4e07;}
+.wrap-three .focus{position: absolute;width: 15rem;height: 1.38rem;border-bottom: 0.02rem solid #c8c7cc;margin-bottom: 0.38rem;}
+.focus .src{position: absolute;top: 0.4rem;left: 0.6rem;width: 2.72rem;height: 0.6rem;border-right: 0.02rem solid #c8c7cc;background: url(../img/focus.png) no-repeat;}
+.focus .font{position: absolute;top: 0.4rem;width: 10.02rem;left: 4.38rem;height: 0.6rem;font-size: 0.48rem;letter-spacing: 0.1rem;font-weight: bold;font-family: "微软雅黑";color: #666;}
+.focus .laba{position: absolute;top: 0.4rem;left: 3.54rem;}
+.wrap-three .center{position: relative;top: 1.4rem;width: 15rem;height: 0.4rem;border-bottom: 0.02rem solid #c8c7cc;background-color: #efeff4;}

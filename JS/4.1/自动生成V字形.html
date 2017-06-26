@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>自动生成V字形</title>
+	<style>
+		div{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 50px;
+			height: 50px;
+			background-color: red;
+			font-size: 30px;
+			text-align: center;
+			line-height: 50px;
+			color: #fff;
+			transition: 1s;
+		}
+		#input1{
+			float: right;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<div>0</div>
+	<div>1</div>
+	<div>2</div>
+	<div>3</div>
+	<div>4</div>
+	
+	<input type="button" value="点击一下" id="input1">
+
+	<script>
+		var der = 0;
+		var aDiv = document.getElementsByTagName('div')
+		var oInput = document.getElementById('input1');
+		var aNum = ['0px','50px','100px','150px','200px'];
+		var aNumone = [2,1,0,1,2];
+		var aNumtwo = [0,1,2,1,0];
+
+		oInput.onclick = function () {
+			// '上'
+			if (der == 0) {
+				der = 1;
+				for(var i=0;i<5;i++){
+					aDiv[i].style.left = aNum[i];
+					aDiv[i].style.top = aNum[aNumone[i]];
+				}
+			}else if ( der == 1) {
+				// '右'
+				der = 2;
+				for(var i=0;i<5;i++){
+					aDiv[i].style.left = aNum[aNumtwo[i]];
+					aDiv[i].style.top = aNum[i];
+				}
+			}else if ( der == 2) {
+				// '下'
+				der = 3;
+				for(var i=0;i<5;i++){
+					aDiv[i].style.left = aNum[i];
+					aDiv[i].style.top = aNum[aNumtwo[i]];
+				}
+			}else if ( der == 3) {
+				// '左'
+				der = 0;
+				for(var i=0;i<5;i++){
+					aDiv[i].style.left = aNum[aNumone[i]];
+					aDiv[i].style.top = aNum[i];
+				}
+			}
+		}
+
+	</script>
+</body>
+</html>

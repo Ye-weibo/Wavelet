@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery-1.8.3.js"></script>
+</head>
+<body>
+	<button>点击改变内容</button>
+
+	<script>
+		$(document).ready(function(){
+			// $.ajax的一般格式
+			//参数 描述
+			// url     必需。规定把请求发送到哪个 URL。
+			// data 可选。映射或字符串值。规定连同请求发送到服务器的数据。
+			// success(data, textStatus, jqXHR) 可选。请求成功时执行的回调函数。
+			// dataType 可选。规定预期的服务器响应的数据类型。
+			// 默认执行智能判断（xml、json、script 或 html）。 
+			$.ajax({   
+				type: 'POST',   
+				url: url ,  
+				data: data ,  
+				success: success ,  
+				dataType: dataType
+			});
+		})
+	</script>
+</body>
+</html>

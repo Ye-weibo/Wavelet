@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		ul{margin: 0;padding: 0;}
+		.box1{width: 400px;height: 400px;border: 1px solid black;margin-right: 10px;overflow: hidden;float: left;}
+		#title{width: 300px;margin-top: 5px;}
+		#text{resize: none;display: block;padding: 0;margin: 20px 20px;}
+		#save{margin-left: 20px;}
+		#wrap{width: 398px;height: 398px;border: 1px solid black;overflow: hidden;float: left;}
+		ul{width: 1200px;height: 100%;}
+		li{width: 398px;height: 398px;float: left;list-style: none;}
+		#prev,#prev1,#next{width: 20px;height: 20px;background-color: rgba(0,0,0,.3);text-align: center;}
+		.p1{margin: 0;width: 396px;height: 20px;border: 1px dashed black;}
+	</style>
+</head>
+<body>
+	<div class="box1">
+		<span>标题:</span>
+		<input id="title" type="text">
+		<textarea id="text" cols="50" rows="20"></textarea>
+		<button id="save">保存</button>
+		<input id="checkbox" type="checkbox">获取百度地图
+	</div>
+	<div id="wrap">
+		<ul>
+			<li id="big-box"></li>
+			<li id="content">
+				<div style="float: left;" id="prev">&lt;</div>
+				<div style="float: right;" id="next">&gt;</div>
+			</li>
+			<li id="map">
+				<div style="float: right;" id="prev1">&lt;</div>
+			</li>
+		</ul>
+	</div>
+	
+	<script>
+		var oTit = document.getElementById('title');
+		var oBtn = document.getElementById('save');
+		var oBig = document.getElementById('big-box');
+		
+		oBtn.onclick=function(){
+			oBig.innerHTML +='<p class="p1">'+oTit.value+'</p>';
+			
+			// 点击内容进入信息表
+			var oP = document.getElementsByClassName('p1');
+			var oCon = document.getElementById('content');
+			var oMap = document.getElementById('map');
+			var oText = document.getElementById('text');
+			
+			for (var i = 0; i < oP.length; i++) {
+				oP[i].onclick=function(){
+					oBig.style.marginLeft = '-410px';
+					oBig.style.transition = '1s';
+					oCon.innerHTML += '<h1>'+oTit.value+'</h1>'+'<span>'+oText.value+'</span>';
+				}
+			}
+		}
+		document.getElementById('prev').addEventListener("click",function(){
+			oBig.style.marginLeft = '0';
+		})
+		document.getElementById('next').addEventListener("click",function(){
+			oCon.style.marginLeft = '-410px';
+		})
+		document.getElementById('prev1').addEventListener("click",function(){
+			oCon.style.marginLeft = '0';
+		})
+			
+	</script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Login Page</title>
+    <script src="jQuery.js" type="text/javascript"></script>
+<script language="javascript" type="text/javascript">
+$(document).ready(function(){
+    $("#btnLogin").click(function(){
+        Login();
+    });
+});
+
+function Login(){
+    if(Check())
+    {
+        LoginSuccess();
+    }
+}
+
+function Check(){
+    if($("#txtUser").val()=="")
+    {
+        alert("The user isn't empty");
+        $("#txtUser").focus();
+        return false;
+    }
+    if($("#txtPassword").val()=="")
+    {
+        alert("The Password isn't empty")
+        $("#txtPassword").focus();
+        return false;
+    }
+    return true;
+}
+
+function LoginSuccess(){
+    $.ajax({
+            type:"POST",
+            url:"CheckLogin.aspx",
+            data:{userName:$("#txtUser").val(),userPwd:$("#txtPassword").val()},
+            beforeSend:function(){$("#msg").html("logining");},             
+            success:function(data){
+           $("#msg").html(decodeURI(data));            
+            }            
+         });
+    }
+
+</script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div style="margin-left:32px;">    
+        <a>User:</a><input id="txtUser" type="text"  />
+    </div>
+    <div>
+        <a>Password:</a><input id="txtPassword" type="text" />
+    </div>
+    <div id="msg"></div>
+    <div>
+        <input id="btnLogin" type="button" value="Login" /></div>
+    </form>
+</body>
+
+</html>

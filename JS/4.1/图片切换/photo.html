@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#warp{margin: 0 auto;width: 500px;height: 600px;border-top: 1px solid black;background-color: #fff;}
+		#top_box{width: 500px;height: 100px;background-color: orange;position: relative;}
+		#center_box{width: 500px;height: 500px;background-color: gray;position: absolute;top: 110px;}
+		#content_box{width: 450px;height: 450px;border: 1px solid #fff;margin: 25px 0 0 25px;}
+		#button,#button1{position: absolute;cursor: pointer;}
+		#button{top: 20px;left: 100px;}
+		#button1{top: 20px;left: 300px;}
+		#p1,#p2{margin: 0;position: absolute;top: 60px;left: 90px;}
+		#p2{display: none;}
+		#font_top,#font_bottom{margin: 0;width: 450px;height: 30px;background-color: rgba(0,0,0,0.3);text-align: center;color: #fff;}
+		#font{margin: 0;width: 450px;text-align: center;color: #fff;left: 50px;}
+		#font_top,#font{position: absolute;top: 25px;}
+		#font_bottom{position: absolute;bottom: 25px;}
+		h3,h4{margin: 0;width: 50px;height: 60px;background-color: rgba(0,0,0,0.4);}
+		h3{position: absolute;top: 200px;left: 28px;}
+		h4{position: absolute;top: 200px;left: 425px;}
+		#h3button,#h4button{width: 50px;height: 60px;background-color: rgba(0,0,0,0.2);border: 0;cursor: pointer;}
+		#img{width: 450px;height: 450px;}
+		#left_img,#right_img{width: 50px;height: 60px;cursor: pointer;position: absolute;top: 0;}
+	</style>
+</head>
+<body>
+		<div id="warp">
+			<div id="top_box">
+				<p id="p1">图片可从最后一张跳转到第一张循环切换</p>
+				<p id="p2">图片只能到最后一张或只能到第一张切换</p>
+				<input type="button" id="button" value="循环切换">
+				<input type="button" id="button1" value="顺序切换">
+			</div>
+				<div id="center_box">
+					<div id="content_box">
+						<img id="img" src="fengjie.jpg">
+						<h1>
+							<h1 id="font_top">1</h1>
+							<h1 id="font">/5</h1>
+						</h1>
+						<h2 id="font_bottom">图片一</h2>
+						<h3>
+						<img id="left_img" src="left.png">
+						<input id="h3button" type="button" name="button">
+						</h3>
+						<h4>
+						<img id="right_img" src="right.png">
+						<input id="h4button" type="button" name="button">
+						</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+		<script>
+			var oP1 = document.getElementById('p1');
+			var oP2 = document.getElementById('p2');
+			var oButton = document.getElementById('button');
+			var oButton1 = document.getElementById('button1');
+			var oLeft = document.getElementById('left_img');
+			var oRight = document.getElementById('right_img');
+			var oFont_top = document.getElementById('font_top');
+			var oFont_bottom = document.getElementById('font_bottom');
+			var oImg = document.getElementById('img')
+			var num = 0;
+			var aImg = ['fengjie.jpg ','fengjie1.jpg','fengjie2.jpg','fengjie3.jpg','taoyan.jpg'];
+			var aFont_top = ['1','2','3','4','5'];
+			var aFont_bottom = ['图片一','图片二','图片三','图片四','图片五'];
+
+			oButton.onclick = function(){
+				oP2.style.display = 'none';
+				oP1.style.display = 'block';
+				
+				oLeft.onclick = function(){
+						num--;
+						if(num<=0){num=5}
+						oImg.src = aImg[num-1];
+						oFont_top.innerText = aFont_top[num-1];
+						oFont_bottom.innerText = aFont_bottom[num-1];
+												
+				}
+				oRight.onclick = function(){
+						num++;
+						if(num>3){num=-1}
+						oImg.src = aImg[num+1];
+						oFont_top.innerText = aFont_top[num+1];
+						oFont_bottom.innerText = aFont_bottom[num+1];
+						
+				}
+				
+			}
+			oButton1.onclick = function(){
+				oP1.style.display = 'none';
+				oP2.style.display = 'block';
+				
+				oLeft.onclick = function(){
+					if (num>0) {
+						oImg.src = aImg[num-1];
+						oFont_top.innerText = aFont_top[num-1];
+						oFont_bottom.innerText = aFont_bottom[num-1];
+						num --;
+					}else{
+						num = 0;
+						alert('亲！这已经是第一张')
+					}
+				}
+				oRight.onclick = function(){
+					if (num<4) {
+						oImg.src = aImg[num+1];
+						oFont_top.innerText = aFont_top[num+1];
+						oFont_bottom.innerText = aFont_bottom[num+1];
+						num ++;
+					}else{
+						num = 4;
+						alert('亲！最后一张咯')
+					}
+				}
+			}
+
+		</script>
+</body>
+</html>

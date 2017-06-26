@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery-1.8.3.js"></script>
+	<style>
+		body,h3{margin: 0;}
+		.box{width: 500px;height: 300px;background-color: pink;margin: 0 auto;}
+		h3{position: relative;top: 150px;left: 100px;}
+		#user{position: relative;top: 100px;}
+		#into{position: relative;top: 200px;left: 200px;}
+		#out{position: relative;top: 200px;left: 210px;}
+		span{position: relative;left: -10px;}
+	</style>
+</head>
+<body>
+	<button id="click">点击弹出</button>
+	<div class="box" style="opacity: 0">
+		<h3 id="user">QQ号码:
+			<input type="text" name="username" id="username" placeholder="5-11位数字">
+			<span class="uesr_icon"></span>
+		</h3>
+		<h3 id="pass">QQ密码:
+			<input type="password" name="password" id="password">
+			<span class="password_icon"></span>
+		</h3>
+		<button id="into">登录</button>
+		<button id="out">退出</button>
+	</div>
+	<script>
+		$(document).ready(function(){
+			//最简单的弹出效果 (不是弹窗☺)
+			$('#click').click(function(){
+				// alert(1);
+				$('.box').css({opacity:1,"transition":"2s"});
+			});
+			//退出
+			$('#out').click(function(){
+				$('.box').css({opacity:0});
+			})
+			// var dt=setInterval("change",3000);
+			var aInp = document.getElementsByTagName('input');
+			var IDCard = /^[1-9][0-9]{4,10}$/; //QQ号码
+			var IDPassword = /^[A-Za-z0-9].{5,}$/; //QQ密码  "."表示任意字符
+			var user=false;
+			var password=false;
+			//判断username
+			$('#password').click(function(){
+				if(IDCard.test(aInp[0].value)){
+					$('.uesr_icon').html("√").css("color","green");
+					user = true;
+				}else{
+					$('.uesr_icon').html("×").css("color","red");
+					user = false;
+				}
+			});
+			//判断password (以点击登录的方式进行判断)
+			$('#into').click(function(){
+				if(IDCard.test(aInp[1].value)){
+					$('.password_icon').html("√").css("color","green");
+					password = true;
+				}else{
+					$('.password_icon').html("×").css("color","red");
+					password = false;
+				}
+			});
+			$('#into').click(function(){
+				// alert(1);
+				if(aInp[0].value == '' && aInp[1].value == ''){
+					$('.uesr_icon').html("×").css("color","red");
+					$('.password_icon').html("×").css("color","red");
+					alert('请输入QQ号码和密码');
+				}else 
+					if(aInp[0].value == ''){
+						alert('请输入QQ号码');
+					}else 
+						if(aInp[1].value == ''){
+						alert('请输入QQ密码');
+					}else
+						if(IDCard.test(aInp[0].value) && IDPassword.test(aInp[1].value)){
+							// alert('登录成功');
+							$('.uesr_icon').html("√").css("color","green");
+							$('.password_icon').html("√").css("color","green");
+							alert("确定要进去?");
+							setInterval(function(){
+								//window.open("http://www.baidu.com");//浏览器会拦截
+								window.location.href="http://weibo.com/xiaoye1920";//浏览器不会拦截
+							},1500);
+						}else{
+							alert('请输入正确的QQ号码或者密码');
+						}
+			})
+		})
+	</script>
+</body>
+</html>

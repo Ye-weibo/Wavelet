@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<textarea value="" cols="30" rows="10"></textarea></br>
+	<textarea value="" cols="30" rows="10"></textarea></br>
+	<button>获取</button>
+
+	<script>
+		var aT = document.getElementsByTagName('textarea');
+		var oBtn = document.getElementsByTagName('button')[0];
+		var re = /操你妈|傻逼|爷爷|叼你妈|滚犊子|傻吊|麻痹/;
+
+		oBtn.onclick=function() {
+			aT[1].value = aT[0].value.replace(re,function(str){
+					var value = '';
+				for (var i = 0; i < str.length; i++) {
+					value += '*';
+				}
+				return value;
+			});
+		}
+	</script>
+</body>
+</html>

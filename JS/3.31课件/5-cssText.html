@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<div></div>
+
+	<!-- 影响到行间样式  替换方式 与innerHTML 原理一样 -->
+
+	<script>
+		var aDiv = document.getElementsByTagName('div');
+
+		aDiv[0].style.width = '100px';
+		aDiv[0].style.height = '100px';
+		aDiv[0].style.backgroundColor = 'red';
+		aDiv[0].style.cssText = 'width:200px;background-color:blue;'
+	</script>
+
+</body>
+</html>

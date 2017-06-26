@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title></title>
+		<style>
+			
+		</style>
+		<script src="./vue.js"></script>
+	</head>
+
+	<body>
+		<div id="app">
+			<h2>自定义组件</h2>
+			<custom>
+				<template  slot="one">
+
+					<div>这是子组件标签里的东西111</div>
+					<div>这是子组件标签里的东西111</div>
+					<div>这是子组件标签里的东西111</div>
+					<div>这是子组件标签里的东西111</div>
+				</template>
+			</custom>
+		</div>
+		<script>
+			//定制模板 div
+			Vue.component("custom",{
+				template:`
+					<div>
+						<slot name="one">
+							<p>这是第1个提醒</p>
+							<p>这是第2个提醒</p>
+						</slot>
+							<p>这是第3个提醒</p>
+					</div>
+				`
+			})
+
+			new Vue({
+				el:"#app"
+			});
+		</script>
+	</body>
+</html>

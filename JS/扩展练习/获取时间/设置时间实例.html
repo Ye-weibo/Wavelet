@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>设置时间</title>
+</head>
+<body>
+	<script>
+			//Sun Jul 31 10:12:45 UTC+0800 2011
+			var mydate1 = new Date();
+			//Fri Apr 3 00:00:00 UTC+0800 2009
+			var mydate2 = new Date('April 3,2009');
+			//Fri Apr 3 08:20:05 UTC+0800 2009
+			var mydate3 = new Date('April 3,2009 8:20:5');
+			//Tue Mar 1 01:00:00 UTC+0800 1904
+			var mydate4 = new Date(04,2,1,1);
+			//Fri Jan 1 16:25:03 UTC+0800 1988
+			var mydate5 = new Date(1988,0,1,16,25,3,4);
+			//Sat Jan 3 15:33:20 UTC+0800 1970
+			var mydate6 = new Date(200000000);
+
+			for(var i=1;i<7;i++){
+				document.write(eval('mydate'+i)+'<br />')
+			}
+	</script>
+</body>
+</html>

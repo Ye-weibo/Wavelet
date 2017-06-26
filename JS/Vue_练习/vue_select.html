@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="vue.js"></script>
+	<script src="jquery-1.8.3.js"></script>
+	<style>
+		input{border: 0;outline: none;}
+		ul{margin: 0;padding: 0;}
+		li{list-style: none;}
+		.wrap{width: 500px;height: 200px;background-color: #4d4df8;box-shadow: 8px 8px 8px #a9bcd0;}
+		.round{width: 50px;height: 50px;border-radius: 50%;background-color: #ffb420;box-shadow: 1px 1px 1px blue;position: relative;top: 10px;left: 10px;cursor: pointer;}
+		.content{width: 315px;height: 50px;border-radius: 2em 2em 2em 2em;background-color: #e4e4fe;position: relative;top: 30px;left: 90px;}
+		.content_text{width: 250px;height: 30px;border: 1px solid #c9c9d5; border-radius: 2em 2em 2em 2em;background-color: #d9d9e2;position: relative;top: 10px;left: 4px;cursor: pointer;}
+		.content_text img{position: relative;top: 5px;left: 5px;}
+		.content_text input{width: 220px;height: 28px;border-radius: 2em 2em 2em 2em;position: relative;top: -26px;left: 30px;cursor: pointer;background-color: #d9d9e2;}
+		.content .button{width: 50px;height: 30px;border-radius: 1em 1em 1em 1em;background-color: #fd635e;color: #000;position: relative;top: -21px;left: 260px;cursor: pointer;}
+		.select{opacity: 0;}
+		.select li{border-radius: 1em 1em 1em 1em;margin-bottom: 20px;cursor: pointer;}
+		.select li:hover{background-color: #fd635e;}
+	</style>
+</head>
+<body>
+	<div class="wrap" id="wrap">
+		<div class="round" id="round"></div>
+		<content-select></content-select>
+	</div>
+	
+	<script>
+		Vue.component('content-select',{
+			props:["list"],
+			template:`
+				<div class="content">
+					<div class="content_text" v-on:click="contentShow">
+						<img src="select_search.png">
+						<input type="text">
+					</div>
+					<input class="button" type="button" value="查询">
+					<ul class="select">
+						<li class="one">北京</li>
+						<li class="two">上海</li>
+						<li class="three">深圳</li>
+					</ul>
+				</div>
+			`,
+			methods:{
+				contentShow:function(){
+					$('.content').css({"height":"200px","transition":"1s"});
+					$('.wrap').css({"height":"300px","transition":"0.5s"});
+					$('.select').css({"opacity":"1","transition":"1.5s"});
+
+					var Arr = [$('.one'),$('.two'),$('.three')];
+					var value = ['北京','上海','深圳'];
+					for (var i = 0; i < Arr.length; i++) {
+						Arr[i].click(function(e){
+							// alert(e.target.innerHTML); //获取对应的value值
+							$('.content input:first').val(e.target.innerHTML);
+						})
+					};
+				},
+			},
+		})
+		new Vue({
+			el:"#wrap",
+		})
+	</script>
+</body>
+</html>

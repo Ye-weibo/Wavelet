@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul id="box">
+		<li>
+			<ul>
+				<li>a</li>
+				<li>b</li>
+				<li>c</li>
+			</ul>
+		</li>
+		<li>
+			<ul>
+				<li>d</li>
+				<li>e</li>
+				<li>f</li>
+			</ul>
+		</li>
+		<li>
+			<ol>
+				<li>aa</li>
+				<li>bb</li>
+				<li>cc</li>
+			</ol>
+			<ul>
+				<li>g</li>
+
+				<li>h</li>
+				<li>i</li>
+			</ul>
+		</li>
+	</ul>
+
+	<script>
+		var oBox = document.getElementById('box');
+		var aUl = oBox.getElementsByTagName('ul');
+		// var aLi = [a,b,c,d,e,f,g,h,j];
+		// var num=0;
+
+	// 	for (var i = 0; i < aUl.length; i++) {
+	// 		var a = aUl[i].getElementsByTagName('li')
+	// 		for (var j = 0; j < a.length; j++) {
+	// 			aLi[num] = a[j];
+	// 			num++;
+	// 		}
+	// 	}
+	// console.log(aLi)
+	// 
+		for( var i=0; i< aUl.length; i++){
+			var aLi = aUl[i].getElementsByTagName('li');
+			for(var j=0; j< aLi.length; j++){
+				aLi[j].style.border = '1px solid red';
+			}
+		}
+
+
+	</script>
+</body>
+</html>

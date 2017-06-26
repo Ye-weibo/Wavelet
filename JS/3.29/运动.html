@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		h1,h3{margin: 0;}
+		#wrap{width: 100%;height: 1000px;background-color: #808080;}
+		h1{position: absolute;top: 25px;left: 25px;}
+		#button{
+			width: 100px;
+			height: 40px;
+			font-size: 12px;
+			border: 1px solid #800000;
+			background-color: #800000;
+			color: #808080;
+			position: absolute;
+			top: 25px;
+			left: 395px;
+		}
+		#button:hover{cursor: pointer;}
+		#center_box{
+			width: 100px;
+			height: 100px;
+			border: 2px solid black;
+			position: absolute;
+			top: 80px;
+			left: 25px;
+
+		}
+		#right_box{
+			display: none;
+			width: 340px;
+			height: 240px;
+			background-color: #9c949c;
+			position: absolute;
+			top: 300px;
+			left: 700px;
+		}
+		#content_box{
+			width: 300px;
+			height: 200px;
+			background-color: #fff;
+			position: absolute;
+			top: 20px;
+			left: 20px;
+		}
+		.h21{position: absolute;top: 23px;left: 15px;}
+		.h22{position: absolute;top: 63px;left: 31px;}
+		.h23{position: absolute;top: 103px;left: 31px;}
+		h2{margin: 0;display: inline-block;font-size: 13px;text-align: center;line-height: 32px;color: #fff;}
+		h2:hover{cursor: pointer;}
+		#h31{
+			width: 32px;
+			height: 32px;
+			background-color: red;
+			position: absolute;
+			top: 15px;
+			left: 165px;
+		}
+		#h32{
+			width: 32px;
+			height: 32px;
+			background-color: yellow;
+			color: black;
+			position: absolute;
+			top: 15px;
+			left: 205px;
+		}
+		#h33{
+			width: 32px;
+			height: 32px;
+			background-color: blue;
+			position: absolute;
+			top: 15px;
+			left: 245px;
+		}
+		h4{
+			margin: 0;
+			width: 30px;
+			height: 30px;
+			background-color: #efefef;
+			border: 1px solid #c0c0c0;
+			text-align: center;
+			line-height: 30px;
+			color: #808080;
+			display: inline-block;
+			position: absolute;
+			top: 59px;
+		}
+		h4:hover,h5:hover {background-color: orange;cursor: pointer;}
+		#h41{left: 165px;}
+		#h42{left: 205px;}
+		#h43{left: 245px;}
+		h5{
+			margin: 0;
+			width: 30px;
+			height: 30px;
+			background-color: #efefef;
+			border: 1px solid #c0c0c0;
+			text-align: center;
+			line-height: 30px;
+			color: #808080;
+			display: inline-block;
+			position: absolute;
+			top: 100px;
+		}
+		#h51{left: 165px;}
+		#h52{left: 205px;}
+		#h53{left: 245px;}
+		#recover,#comfirm{background-color: #002952;border: 0;color: #fff;}
+		#recover{position: absolute;top: 150px;left: 88px;}
+		#comfirm{position: absolute;top: 150px;left: 185px;}
+		#recover:hover,#comfirm:hover{cursor: pointer;}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<h1>请为下面的DIV设置样式:</h1>
+		<input type="button" id="button" value="点击设置">
+
+		<div id="center_box"></div>
+		<div id="right_box">
+			<div id="content_box">
+				<input type="button" id="recover" value="恢复">
+				<input type="button" id="comfirm" value="确定">
+				<h3 class="h21">请选择背景颜色:
+					<h2 id="h31">红</h2>
+					<h2 id="h32">黄</h2>
+					<h2 id="h33">蓝</h2>
+				</h3>
+				<h3 class="h22">请选择宽(px):
+					<h4 id="h41">200</h4>
+					<h4 id="h42">300</h4>
+					<h4 id="h43">400</h4>
+				</h3>
+				<h3 class="h23">请选择高(px):
+					<h5 id="h51">200</h5>
+					<h5 id="h52">300</h5>
+					<h5 id="h53">400</h5>
+				</h3>
+		</div>
+	</div>
+</div>
+	<script>
+		var oButton = document.getElementById('button');
+		var oCenter_box = document.getElementById('center_box');
+		var oRight_box = document.getElementById('right_box');
+		var oRecover = document.getElementById('recover');
+		var oComfirm = document.getElementById('comfirm');
+		
+		var oH31 = document.getElementById('h31');
+		var oH32 = document.getElementById('h32');
+		var oH33 = document.getElementById('h33');
+		
+		var oH41 = document.getElementById('h41');
+		var oH42 = document.getElementById('h42');
+		var oH43 = document.getElementById('h43');
+		
+		var oH51 = document.getElementById('h51');
+		var oH52 = document.getElementById('h52');
+		var oH53 = document.getElementById('h53');
+			oButton.onclick = function () {
+				right_box.style.display = "block";
+			}
+			oH31.onclick = function () {
+				center_box.style.backgroundColor = "red";
+			}
+			oH32.onclick = function () {
+				center_box.style.backgroundColor = "yellow";
+			}
+			oH33.onclick = function () {
+				center_box.style.backgroundColor = "blue";
+			}
+
+			oH41.onclick = function () {
+				center_box.style.transition = "1s";
+				center_box.style.width = "200px";
+			}
+			oH42.onclick = function () {
+				center_box.style.transition = "1s";
+				center_box.style.width = "300px";
+			}
+			oH43.onclick = function () {
+				center_box.style.transition = "1s";
+				center_box.style.width = "400px";
+			}
+
+			oH51.onclick = function () {
+				center_box.style.transition = "1s";
+				center_box.style.height = "200px";
+			}
+			oH52.onclick = function () {
+				center_box.style.transition = "1s";
+				center_box.style.height = "300px";
+			}
+			oH53.onclick = function () {
+				center_box.style.transition = "1s";
+				center_box.style.height = "400px";
+			}
+
+			oRecover.onclick = function () {
+				center_box.style.width = "100px";
+				center_box.style.height = "100px";
+			}
+
+			oComfirm.onclick = function () {
+				right_box.style.display = "none";
+			}
+	</script>
+</body>
+</html>

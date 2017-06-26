@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#div1 div{display: none;width: 200px;height: 200px;border: 1px solid #ccc;margin-top: 5px;}
+	</style>
+</head>
+<body>
+	<div id="div1">
+		<input class="button1" type="button" value="1">
+		<input type="button" value="2">
+		<input type="button" value="3">
+		<div id="div2" style="display: block;">111</div>
+		<div>222</div>
+		<div>333</div>
+	</div>
+
+	<script>
+		window.onload=function(){
+			var arr = new Array();
+			arr.init();
+		}
+		function Array(){
+			this.oDiv = document.getElementById('div1');
+			this.aInp = this.oDiv.getElementsByTagName('input');
+			this.oDiv2 = this.oDiv.getElementsByTagName('div');
+		}
+		Array.prototype.init=function(){
+			var This = this;
+			// console.log(this);
+			for (var i = 0; i < this.aInp.length; i++) {
+				this.aInp[i].index = i;
+					// console.log(this)
+				this.aInp[i].onclick=function(){
+					// alert(this.value);
+					This.get(this);
+				}
+			}
+		};
+		Array.prototype.get=function(inp){
+			// console.log(inp);
+			for (var i = 0; i < this.aInp.length; i++) {
+				this.aInp[i].ClassName = '';
+				this.oDiv2[i].style.display = 'none';
+			}
+			inp.className = 'button1';
+			this.oDiv2[inp.index].style.display = 'block';
+		};
+	</script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#chatblock{position: relative;width: 500px;height: 700px;border: 2px solid black;border-radius: 12px;}
+		#content{width: 500px;height: 600px;border-radius: 12px;background-color: rgba(0,0,0,0.1);overflow: auto;}
+		/*#contnet:hover{overflow-y: scroll;}*/
+		#footer{position: absolute;bottom: 0;width: 500px;height: 100px;background-color: rgba(0,0,0,0.2);}
+		#icon,#img,#chatbox,#sent{position: absolute;}
+		#img,#icon{width: 40px;height: 40px;top: 30px;left: 50px;}
+		#img{top: 0;left: 0;}
+		#chatbox{width: 250px;height: 20px;top: 40px;left: 100px;border: 0;outline: none;}
+		#sent{top: 42px;left: 360px;}
+		.green{
+			display: inline-block;
+			padding: 5px 8px;
+			font-family: 微软雅黑;
+			font-size: 16px;
+			border-radius: 3 px;
+			background-color: #2EDB23;
+			border-radius: 10px;
+		}
+		.gray{
+			display: inline-block;
+			padding: 5px 8px;
+			margin-right: 0;
+			font-family: 微软雅黑;
+			font-size: 16px;
+			background-color: #2EDB23;
+			border-radius: 10px;
+		}
+		.grayblock{
+			display: flex;
+			flex-direction: row;
+			margin: 3px;
+		}
+		.greenblock{
+			display: flex;
+			flex-direction: row-reverse;
+			margin: 3px;
+		}
+		.img_right,.img_left{width: 30px;height: 30px;}
+		.img_right{float: right;}
+		.img_left{float: left;}
+	</style>
+</head>
+<body>
+	<div id="chatblock">
+		<div id="content"></div>
+			<div id="footer">
+				<div id="icon"><img id="img" src="man.png"></div>
+					<input type="text" id="chatbox">
+					<input type="button" id="sent" value="发送">
+			</div>
+		</div>
+	<script>
+		window.onload = function () {
+			var oInput = document.getElementById('chatbox');
+			var oButton = document.getElementById('sent');
+			var oText = document.getElementById('content');
+			var oImg_box = document.getElementById('icon');
+			var oImg = document.getElementById('img');
+			var num = 0;
+			var flag = 0;
+			var arrText = [];
+			var arrImg = [];
+			var arrClass = [];
+			var html = "";
+
+			oImg_box.onclick = function () {
+
+				if (num == 0) {
+					oImg.src = "man.png";
+					num = 1;flag = 0;
+				}else if (num == 1) {
+					oImg.src = "women.png";num = 0;flag = 1;
+				}
+			};
+			oButton.onclick = function () {
+				html = "";
+				if (oInput.value == "") {alert("请输入内容")}
+					else{
+						arrText.unshift(oInput.value);
+						oInput.value = "";
+						if (flag == 0) {
+							arrImg.unshift('man.png');
+							arrClass.unshift("green");
+						}
+						else if (flag == 1) {
+							arrImg.unshift('women.png');
+							arrClass.unshift("gray");
+						}
+						for (var i = 0;i < arrText.length;i++) {
+							if ("green") {
+								html += "<div class = '"+arrClass[i]+"block'><img class='img_right' src="+arrImg[i]+"><span class = '"+arrClass[i]+"'>"+ arrText[i] +"</span></div>";
+							}
+							else if ("gray"){
+								html += "<div class = '"+arrClass[i]+"block'><img class='img_left' src="+arrImg[i]+"><span class ="+arrClass[i]+"'>"+ arrText[i] +"</span></div>";
+							}
+						}
+							oText.innerHTML = html;
+					}
+			}
+		}
+	</script>
+</body>
+</html>

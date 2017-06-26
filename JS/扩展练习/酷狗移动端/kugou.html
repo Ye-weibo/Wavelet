@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>酷狗移动端</title>
+	<!-- <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" /> -->
+	<link rel="stylesheet" type="text/css" href="kugou.css">
+	<link rel="stylesheet" href="swiper.css">
+	<script type="text/javascript" src="kugou.js"></script>
+	<script src="jquery-1.11.0.min.js"></script>
+	<!-- <script src="TouchSlide.1.1.js"></script> -->
+	<script src="swiper.js"></script>
+	<script>
+			(function(){
+		var w = window.screen.width; //屏幕宽度
+		var targetW = 750;
+		var scale = w/targetW; //当前尺寸/目标尺寸  缩放比例
+		var meta = document.createElement("meta");
+		meta.name = "viewport";
+		meta.content = "user-scalable=no,initial-scale="+scale+",minimum-scale="+scale+",maximum-scale="+scale+""
+		document.head.appendChild(meta); //添加标签
+	})();
+	(function () {
+    document.addEventListener('DOMContentLoaded', function () {
+        var html = document.documentElement;
+        var windowWidth = html.clientWidth;
+        html.style.fontSize = windowWidth / 7.5 + 'px';
+        // 等价于html.style.fontSize = windowWidth / (750 / 100) + 'px';
+    }, false);
+	})();
+	</script>
+</head>
+<body>
+	<div class="home">
+		<div style="position: fixed;top: 0;left: 0;z-index: 3;">
+			<div class="title">
+				<img src="./images/logo.png">
+				<img src="./images/search.png">
+				<div class="title-right">
+					<p>下载酷狗</p>
+				</div>
+			</div>
+			<ul class="nav">
+				<li class="aline">新歌</li>
+				<li class="aline">排行</li>
+				<li class="aline">歌单</li>
+				<li class="aline">歌手</li>
+				<div class="line"></div>
+			</ul>
+			<div class="stripe"></div>
+		</div>
+		<ul class="wrap">
+		<!-- 新歌页面 content-->
+			<div class="wrap-one">
+				<div class="swiper-container">
+		    		<div class="swiper-wrapper">
+		        	<div class="swiper-slide"><img src="./images/one.jpg"></div>
+		        	<div class="swiper-slide"><img src="./images/two.jpg"></div>
+		        	<div class="swiper-slide"><img src="./images/three.jpg"></div>
+		        	<div class="swiper-slide"><img src="./images/four.jpg"></div>
+		        	<div class="swiper-slide"><img src="./images/five.jpg"></div>
+		    	</div>
+		    	<div class="swiper-pagination"></div>
+				</div>
+				<!-- 新歌页面 content -->
+				<ul class="content-one">
+					<li>
+						<span>简弘亦-天问【思美人插曲】</span>
+						<a href="#"><img src="./images/xiazai.png"></a>
+					</li>
+					<li>
+						<span>蒋雪儿-爱河</span>
+						<a href="#"><img src="./images/xiazai.png"></a>
+					</li>
+					<li>
+						<span>庄心妍-我不相信</span>
+						<a href="#"><img src="./images/xiazai.png"></a>
+					</li>
+					<li>
+						<span>刘心、李炜、谭佑铭、武艺-义【毒诫推广曲】</span>
+						<a href="#"><img src="./images/xiazai.png"></a>
+					</li>
+					<li>
+						<span>徐千雅-岁月之影</span>
+						<a href="#"><img src="./images/xiazai.png"></a>
+					</li>
+					<li>
+						<span>赵照-一匹马</span>
+						<a href="#"><img src="./images/xiazai.png"></a>
+					</li>
+					<li>
+						<span>叶里-莫殊途</span>
+						<a href="#"><img src="./images/xiazai.png"></a>
+					</li>
+					<li>
+						<span>黄子韬-Collateral Love</span>
+						<a href="#"><img src="./images/xiazai.png"></a>
+					</li>
+					<li>
+						<span>汪苏泷-青春白皮书【小情书推广曲】</span>
+						<a href="#"><img src="./images/xiazai.png"></a>
+					</li>
+					<li>
+						<span>魏晨-弟兄【抢红推广曲】</span>
+						<a href="#"><img src="./images/xiazai.png"></a>
+					</li>
+					<li>
+						<span>谭维维-昨天涯--献给布宣诺斯艾利斯</span>
+						<a href="#"><img src="./images/xiazai.png"></a>
+					</li>
+					<li>
+						<span>沈梦辰-追梦星辰</span>
+						<a href="#"><img src="./images/xiazai.png"></a>
+					</li>
+				</ul>
+			</div>
+			<!-- 排行页面 content -->
+			<div class="wrap-two">
+				<ul class="content-two">
+					<li>
+						<img src="./images/one.png">
+						<span>酷狗飙升榜</span>
+						<img src="./images/arrow.png">
+					</li>
+					<li>
+						<img src="./images/two.png">
+						<span>酷狗TOP500</span>
+						<img src="./images/arrow.png">
+					</li>
+					<li>
+						<img src="./images/one.png">
+						<span>酷狗飙升榜</span>
+						<img src="./images/arrow.png">
+					</li>
+					<li>
+						<img src="./images/one.png">
+						<span>酷狗飙升榜</span>
+						<img src="./images/arrow.png">
+					</li>
+					<li>
+						<img src="./images/one.png">
+						<span>酷狗飙升榜</span>
+						<img src="./images/arrow.png">
+					</li>
+					<li>
+						<img src="./images/one.png">
+						<span>酷狗飙升榜</span>
+						<img src="./images/arrow.png">
+					</li>
+					<li>
+						<img src="./images/one.png">
+						<span>酷狗飙升榜</span>
+						<img src="./images/arrow.png">
+					</li>
+					<li>
+						<img src="./images/one.png">
+						<span>酷狗飙升榜</span>
+						<img src="./images/arrow.png">
+					</li>
+				</ul>
+			</div>
+			<!-- 歌单页面 content -->
+			<div class="wrap-three">
+				<ul class="content-three">
+					<li>
+						<img src="./images/three.png">
+						<span>震惊,这首被翻唱成多国语言版本你听过吗
+						<p>☊121261</p>
+						</span>
+						<img src="./images/arrow.png">
+					</li>
+					<li>
+						<img src="./images/four.png">
+						<span>Tropical House海岛阳光
+						<p>☊342749</p>
+						</span>
+						<img src="./images/arrow.png">
+					</li>
+					<li>
+						<img src="./images/three.png">
+						<span>不输欧美的国内rapper
+						<p>☊932391</p>
+						</span>
+						<img src="./images/arrow.png">
+					</li>
+					<li>
+						<img src="./images/three.png">
+						<span>歌中百味,是否有一首唱中你的心情
+						<p>☊855148</p>
+						</span>
+						<img src="./images/arrow.png">
+					</li>
+					<li>
+						<img src="./images/three.png">
+						<span>早晨阳光带上美妙旋律上路吧!
+						<p>☊1227678</p>
+						</span>
+						<img src="./images/arrow.png">
+					</li>
+					<li>
+						<img src="./images/three.png">
+						<span>摇滚是要燥
+						<p>☊710644</p>
+						</span>
+						<img src="./images/arrow.png">
+					</li>
+					<li>
+						<img src="./images/three.png">
+						<span>金曲捞 合辑
+						<p>☊5241345</p>
+						</span>
+						<img src="./images/arrow.png">
+					</li>
+					<li>
+						<img src="./images/three.png">
+						<span>这些歌带你重温电影里的深情告白
+						<p>☊1967682</p>
+						</span>
+						<img src="./images/arrow.png">
+					</li>
+				</ul>
+			</div>
+			<!-- 歌手页面 content -->
+			<div class="wrap-four">
+				<div class="content-four">
+					<div>
+						<span>热门歌手</span>
+						<img src="./images/arrow.png">
+					</div>
+					<ul>
+						<li>
+							<span>华语男歌手</span>
+							<img src="./images/arrow.png">
+						</li>
+						<li>
+							<span>华语女歌手</span>
+							<img src="./images/arrow.png">
+						</li>
+						<li>
+							<span>华语组合</span>
+							<img src="./images/arrow.png">
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<span>日韩男歌手</span>
+							<img src="./images/arrow.png">
+						</li>
+						<li>
+							<span>日韩女歌手</span>
+							<img src="./images/arrow.png">
+						</li>
+						<li>
+							<span>日韩组合</span>
+							<img src="./images/arrow.png">
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<span>欧美男歌手</span>
+							<img src="./images/arrow.png">
+						</li>
+						<li>
+							<span>欧美女歌手</span>
+							<img src="./images/arrow.png">
+						</li>
+						<li>
+							<span>欧美组合</span>
+							<img src="./images/arrow.png">
+						</li>
+					</ul>
+				</div>
+			</div>
+		</ul>
+	</div>
+</body>
+</html>

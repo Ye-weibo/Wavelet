@@ -1,2 +1,3 @@
- Welcome to my git library !                                                          
-Above are individual exercises, late at any time to modify
+flex-add
+这是一个关于flexbox基础的骰子布局
+ [demo](http://carryguan.me/flex-add/fb1.html) 
